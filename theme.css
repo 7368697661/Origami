@@ -1,6 +1,6 @@
-/* newt 🦎
+/* Midnight Newt ⚫
    by kneecaps
-   A workhorse theme with a ton of character, seeking to serve as a simple ui replacement Obsidian that remains soft and easy on the eyes 🥰
+   An all black re-coloring of Newt, giving it pitch black 000s and brilliant white text for that light night void work 👽
    Theme base by Pseudometa https://github.com/obsidian-community/obsidian-theme-template/blob/main/obsidian.css (thanks so much for this! [i still need to clean the theme though])
    Many features taken from Ultra Lobster, i still need to write credit and documention so check that git for most of the credit for now, and im super sorry if that doesn't work for now!
 */
@@ -27,10 +27,10 @@
 }
 
 :root {
-  --r0: #f4eeff;
-  --r1: #dcd6f7;
-  --r2: #a6b1e1;
-  --r3: #424874;
+  --r0: #f4f0e8;
+  --r1: #E0C9A6;
+  --r2: #5a5a5a;
+  --r3: #3a3a3a;
   --rA: #b69477;
 
   --bg: #14141f;
@@ -396,6 +396,179 @@ select:focus,
 .checkbox-container.is-enabled {
   background-color: transparent;
   outline: 2px dashed var(--color-accent);
+}
+
+/*📝
+ Special checkboxes, inspiration originally taken from the wonderful Primary to figure out how the css works!
+note to knee: truncate this mess!
+*/
+
+/* ◭ — The Shore */
+input[data-task="◭"],
+li[data-task="◭"] > input,
+li[data-task="◭"] > p > input {
+  border-radius: 4px;
+}
+input[data-task="◭"]:checked,
+li[data-task="◭"] > input:checked,
+li[data-task="◭"] > p > input:checked {
+  cursor: default;
+  border: 1px solid transparent;
+}
+
+
+input[data-task="◭"]:checked:before,
+li[data-task="◭"] > input:checked:before,
+li[data-task="◭"] > p > input:checked:before {
+  cursor: default;
+  content: '◭';
+  color: var(--color-accent);
+  position: absolute;
+  margin-top: -2px;
+  border: 1px dashed transparent;
+  border-radius: 4px;
+  z-index: -1;
+}
+
+
+.theme-light input[data-task="◭"]:checked, .theme-dark input[data-task="◭"]:checked,
+.theme-light li[data-task="◭"] > input:checked,
+.theme-dark li[data-task="◭"] > input:checked,
+.theme-light li[data-task="◭"] > p > input:checked,
+.theme-dark li[data-task="◭"] > p > input:checked {
+  background-color: transparent;
+  border: 1px solid transparent;
+  box-shadow: none;
+}
+
+/* ◈ — Ritual Philosophy */
+input[data-task="◈"],
+li[data-task="◈"] > input,
+li[data-task="◈"] > p > input {
+  border-radius: 4px;
+}
+input[data-task="◈"]:checked,
+li[data-task="◈"] > input:checked,
+li[data-task="◈"] > p > input:checked {
+  cursor: default;
+  border: 1px solid transparent;
+}
+
+
+input[data-task="◈"]:checked:before,
+li[data-task="◈"] > input:checked:before,
+li[data-task="◈"] > p > input:checked:before {
+  cursor: default;
+  content: '◈';
+  color: var(--color-accent);
+  position: absolute;
+  margin-top: -2px;
+  border: 1px dashed transparent;
+  border-radius: 4px;
+  z-index: -1;
+}
+
+
+.theme-light input[data-task="◈"]:checked, .theme-dark input[data-task="◈"]:checked,
+.theme-light li[data-task="◈"] > input:checked,
+.theme-dark li[data-task="◈"] > input:checked,
+.theme-light li[data-task="◈"] > p > input:checked,
+.theme-dark li[data-task="◈"] > p > input:checked {
+  background-color: transparent;
+  border: 1px solid transparent;
+  box-shadow: none;
+}
+
+/* ◩ — The Shore */
+input[data-task="◩"],
+li[data-task="◩"] > input,
+li[data-task="◩"] > p > input {
+  border-radius: 4px;
+}
+input[data-task="◩"]:checked,
+li[data-task="◩"] > input:checked,
+li[data-task="◩"] > p > input:checked {
+  cursor: default;
+  border: 1px solid transparent;
+}
+
+
+input[data-task="◩"]:checked:before,
+li[data-task="◩"] > input:checked:before,
+li[data-task="◩"] > p > input:checked:before {
+  cursor: default;
+  content: '◩';
+  color: var(--color-accent);
+  position: absolute;
+  margin-top: -2px;
+  border: 1px dashed transparent;
+  border-radius: 4px;
+  z-index: -1;
+}
+
+
+.theme-light input[data-task="◩"]:checked, .theme-dark input[data-task="◩"]:checked,
+.theme-light li[data-task="◩"] > input:checked,
+.theme-dark li[data-task="◩"] > input:checked,
+.theme-light li[data-task="◩"] > p > input:checked,
+.theme-dark li[data-task="◩"] > p > input:checked {
+  background-color: transparent;
+  border: 1px solid transparent;
+  box-shadow: none;
+}
+
+/* ◉ — Ruinous Effigy */
+input[data-task="◉"],
+li[data-task="◉"] > input,
+li[data-task="◉"] > p > input {
+  border-radius: 4px;
+}
+input[data-task="◉"]:checked,
+li[data-task="◉"] > input:checked,
+li[data-task="◉"] > p > input:checked {
+  cursor: default;
+  border: 1px solid transparent;
+}
+
+
+input[data-task="◉"]:checked:before,
+li[data-task="◉"] > input:checked:before,
+li[data-task="◉"] > p > input:checked:before {
+  cursor: default;
+  content: '◉';
+  color: var(--color-accent);
+  position: absolute;
+  margin-top: -2px;
+  border: 1px dashed transparent;
+  border-radius: 4px;
+  z-index: -1;
+}
+
+
+.theme-light input[data-task="◉"]:checked, .theme-dark input[data-task="◉"]:checked,
+.theme-light li[data-task="◉"] > input:checked,
+.theme-dark li[data-task="◉"] > input:checked,
+.theme-light li[data-task="◉"] > p > input:checked,
+.theme-dark li[data-task="◉"] > p > input:checked {
+  background-color: transparent;
+  border: 1px solid transparent;
+  box-shadow: none;
+}
+
+input[type=checkbox]:checked:after {
+  display: none;
+}
+input[type=checkbox]:checked {
+  background-color: var(--background-primary-alt);
+  border: 1px solid var(--background-primary-alt);
+}
+
+.markdown-source-view.mod-cm6 .HyperMD-task-line[data-task="x"], .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task="X"] {
+  text-decoration: none;
+  color: var(--text-muted);
+}
+input[type=checkbox] {
+  border: 1px solid var(--background-primary-alt);
 }
 
 .checkbox-container.is-enabled:after {
