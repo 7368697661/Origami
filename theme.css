@@ -355,36 +355,16 @@ select:focus,
 }
 
 .tooltip .tooltip-arrow {
-    position: absolute;
-    top: -5px;
-    left: 50%;
-    width: 0;
-    margin-left: -5px;
     border-bottom: 5px solid var(--background-primary-alt);
-    border-right: 5px solid transparent;
-    border-left: 5px solid transparent;
-    content: " ";
-    font-size: 0;
-    line-height: 0;
   }
   .tooltip.mod-right .tooltip-arrow {
-    top: calc(50% - 5px);
-    left: -5px;
     border-right: 5px solid var(--background-primary-alt);
-    border-top: 5px solid transparent;
-    border-bottom: 5px solid transparent;
   }
   .tooltip.mod-left .tooltip-arrow {
-    top: calc(50% - 5px);
-    left: calc(100% + 5px);
     border-left: 5px solid var(--background-primary-alt);
-    border-top: 5px solid transparent;
-    border-bottom: 5px solid transparent;
   }
   .tooltip.mod-top .tooltip-arrow {
-    top: 100%;
     border-top: 5px solid var(--background-primary-alt);
-    border-bottom: 5px solid transparent;
 }
 
 .notice {
@@ -452,12 +432,17 @@ select:focus,
 .workspace-split.mod-vertical .workspace-leaf-resize-handle,
 .workspace-split.mod-left-split .workspace-leaf-resize-handle {
     border-left: none;
-    border-bottom: 2px dashed (--background-modifier-border);
-    border-right: 2px dashed var(--background-modifier-border);
+    border-bottom: 2px dashed var(--background-primary-alt);
+    border-right: 2px dashed var(--background-primary-alt);
 }
 
 .workspace .mod-root .workspace-tabs.mod-stacked .workspace-tab-container .workspace-tab-header {
     box-shadow: none;
+}
+
+.is-focused .mod-active .workspace-tab-header.is-active .workspace-tab-header-inner-icon, .is-focused .mod-active .workspace-tab-header.is-active .workspace-tab-header-inner-title {
+    color: var(--tab-text-color-focused-active-current);
+    font-variation-settings: 'SOFT' 100, 'WONK' 0, 'wght' 600;
 }
 
 a.tag {
@@ -466,6 +451,7 @@ a.tag {
     padding-right: 2px;
     padding-top: 0px;
     padding-bottom: 0px;
+    font-variation-settings: 'SOFT' 100, 'WONK' 0, 'wght' 600;
     background-color: transparent;
 }
 
@@ -826,8 +812,8 @@ kbd,
     .workspace-tab-container
     .workspace-tab-header {
         border-top-right-radius: 8px;
-    border-top: 2px dashed (--background-modifier-border);
-    border-right: 2px dashed (--background-modifier-border);
+    border-top: 2px dashed var(--background-primary-alt);
+    border-right: 2px dashed var(--background-primary-alt);
 }
 
 .better-command-palette .better-command-palette-title {
