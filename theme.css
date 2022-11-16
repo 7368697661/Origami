@@ -1,4 +1,4 @@
-/* Origami ⚫
+/* Origami 📜
    by kneecaps
    Crafted with 💖 to mimic the soft tactility of a sheet of paper, with the word processing of digital tools ⌨️
 
@@ -30,20 +30,20 @@
 
 :root {
   --r0: #f4f0e8;
-  --r1: #E0C9A6;
-  --r2: #5a5a5a;
-  --r3: #3a3a3a;
-  --rA: #b69477;
+  --r1: #ddd2bb;
+  --r2: #666666;
+  --r3: #333333;
+  --rA: #C0362C;
 
   --bg: #14141f;
-  --pal0: #f4eeff;
-  --pal1: #dcd6f7;
-  --pal2: #a6b1e1;
-  --pal3: #cddeff;
-  --pal4: #a8b1ce;
-  --pal5: #8785a2;
-  --pal6: #a6b1e1;
-  --pal7: #424874;
+  --pal0: #F4F0E8;
+  --pal1: #D7D4CD;
+  --pal2: #BAB7B1;
+  --pal3: #9D9A95;
+  --pal4: #62615E;
+  --pal5: #454442;
+  --pal6: #282726;
+  --pal7: #0A0A0A;
 }
 
 body {
@@ -69,9 +69,7 @@ body {
   ); /*Border outline of quotes, tables, line breaks*/
 
   --text-normal: var(--r0); /*Text body of note*/
-  --text-muted: var(
-    --r2
-  ); /*Text darker for sidebar, toggles, inactive, tags, etc*/
+  --text-muted: var(--r1); /*Text darker for sidebar, toggles, inactive, tags, etc*/
   --text-accent: var(--color-accent); /*Links*/
   --text-accent-hover: var(--r2); /*Links hover*/
   --text-faint: var(--r2); /*Link brackets color & Gutter Numbers*/
@@ -168,7 +166,7 @@ since it includes any border and padding into the height and width values you se
 
 /* Type settings */
 .cm-hmd-frontmatter {
-  font-size: 0.85rem;
+  font-size: 0.95em;
 }
 
 .cm-hmd-frontmatter.cm-hmd-frontmatter.cm-def {
@@ -185,9 +183,9 @@ p,
 li {
   line-height: 24px;
   grid-row: 10px;
-  font-size: 18px;
+  font-size: 16px;
   font-family: var(--font-text);
-  font-variation-settings: 'SOFT' 0, 'WONK' 0, 'wght' 400;
+  font-variation-settings: 'SOFT' 0, 'WONK' 0, 'opsz' 9, 'wght' 300;
 }
 
 .mk-new-note p {
@@ -200,7 +198,7 @@ li {
   line-height: var(--line-height-tight);
   font-family: var(--font-title);
   letter-spacing: 3px;
-  font-variation-settings: 'SOFT' 100, 'WONK' 1, 'wght' 900;
+  font-variation-settings: 'SOFT' 100, 'WONK' 1, 'opsz' 144, 'wght' 800;
 }
 
 .external-link {
@@ -217,7 +215,7 @@ li {
 .markdown-source-view.mod-cm6 .cm-underline {
   text-decoration-line: none;
   color: var(--text-accent);
-  font-variation-settings: 'SOFT' 100, 'WONK' 1, 'wght' 400;
+  font-variation-settings: 'SOFT' 100, 'WONK' 1, 'opsz' 9, 'wght' 600;
 }
 
 .markdown-source-view.mod-cm6 .cm-link .cm-underline,
@@ -241,7 +239,7 @@ a,
 .markdown-rendered .internal-link {
   text-decoration-line: none;
   color: var(--text-normal);
-  font-variation-settings: 'SOFT' 100, 'WONK' 1, 'wght' 500;
+  font-variation-settings: 'SOFT' 100, 'WONK' 1, 'opsz' 9, 'wght' 600;
 }
 
 a:hover,
@@ -249,18 +247,18 @@ a:hover,
 .markdown-rendered .internal-link:hover {
   text-decoration-line: none;
   color: var(--text-accent);
-  font-variation-settings: 'SOFT' 100, 'WONK' 1, 'wght' 500;
+  font-variation-settings: 'SOFT' 100, 'WONK' 1, 'opsz' 9, 'wght' 600;
 }
 
 .inline-title {
-  color: var(--text-normal);
+  color: var(--text-accent);
   font-family: var(--font-title);
-  font-variation-settings: 'SOFT' 100, 'WONK' 0, 'opsz' 69, 'wght' 600;
+  font-variation-settings: 'SOFT' 100, 'WONK' 0, 'opsz' 72, 'wght' 500;
 }
 
 strong,
 .cm-strong {
-  font-variation-settings: 'SOFT' 100, 'WONK' 0, 'wght' 600;
+  font-variation-settings: 'SOFT' 100, 'WONK' 1, 'opsz' 9, 'wght' 700;
   color: var(--text-faint);
 }
 
@@ -405,23 +403,23 @@ select:focus,
 note to knee: truncate this mess!
 */
 
-/* ◭ — The Shore */
-input[data-task="◭"],
-li[data-task="◭"] > input,
-li[data-task="◭"] > p > input {
+/* 0 ◭ — The Shore */
+input[data-task="0"],
+li[data-task="0"] > input,
+li[data-task="0"] > p > input {
   border-radius: 4px;
 }
-input[data-task="◭"]:checked,
-li[data-task="◭"] > input:checked,
-li[data-task="◭"] > p > input:checked {
+input[data-task="0"]:checked,
+li[data-task="0"] > input:checked,
+li[data-task="0"] > p > input:checked {
   cursor: default;
   border: 1px solid transparent;
 }
 
 
-input[data-task="◭"]:checked:before,
-li[data-task="◭"] > input:checked:before,
-li[data-task="◭"] > p > input:checked:before {
+input[data-task="0"]:checked:before,
+li[data-task="0"] > input:checked:before,
+li[data-task="0"] > p > input:checked:before {
   cursor: default;
   content: '◭';
   color: var(--color-accent);
@@ -433,33 +431,34 @@ li[data-task="◭"] > p > input:checked:before {
 }
 
 
-.theme-light input[data-task="◭"]:checked, .theme-dark input[data-task="◭"]:checked,
-.theme-light li[data-task="◭"] > input:checked,
-.theme-dark li[data-task="◭"] > input:checked,
-.theme-light li[data-task="◭"] > p > input:checked,
-.theme-dark li[data-task="◭"] > p > input:checked {
+.theme-light input[data-task="0"]:checked,
+.theme-dark input[data-task="0"]:checked,
+.theme-light li[data-task="0"] > input:checked,
+.theme-dark li[data-task="0"] > input:checked,
+.theme-light li[data-task="0"] > p > input:checked,
+.theme-dark li[data-task="0"] > p > input:checked {
   background-color: transparent;
   border: 1px solid transparent;
   box-shadow: none;
 }
 
-/* ◈ — Ritual Philosophy */
-input[data-task="◈"],
-li[data-task="◈"] > input,
-li[data-task="◈"] > p > input {
+/* 1 ◈ — Ritual Philosophy */
+input[data-task="1"],
+li[data-task="1"] > input,
+li[data-task="1"] > p > input {
   border-radius: 4px;
 }
-input[data-task="◈"]:checked,
-li[data-task="◈"] > input:checked,
-li[data-task="◈"] > p > input:checked {
+input[data-task="1"]:checked,
+li[data-task="1"] > input:checked,
+li[data-task="1"] > p > input:checked {
   cursor: default;
   border: 1px solid transparent;
 }
 
 
-input[data-task="◈"]:checked:before,
-li[data-task="◈"] > input:checked:before,
-li[data-task="◈"] > p > input:checked:before {
+input[data-task="1"]:checked:before,
+li[data-task="1"] > input:checked:before,
+li[data-task="1"] > p > input:checked:before {
   cursor: default;
   content: '◈';
   color: var(--color-accent);
@@ -471,33 +470,33 @@ li[data-task="◈"] > p > input:checked:before {
 }
 
 
-.theme-light input[data-task="◈"]:checked, .theme-dark input[data-task="◈"]:checked,
-.theme-light li[data-task="◈"] > input:checked,
-.theme-dark li[data-task="◈"] > input:checked,
-.theme-light li[data-task="◈"] > p > input:checked,
-.theme-dark li[data-task="◈"] > p > input:checked {
+.theme-light input[data-task="1"]:checked, .theme-dark input[data-task="1"]:checked,
+.theme-light li[data-task="1"] > input:checked,
+.theme-dark li[data-task="1"] > input:checked,
+.theme-light li[data-task="1"] > p > input:checked,
+.theme-dark li[data-task="1"] > p > input:checked {
   background-color: transparent;
   border: 1px solid transparent;
   box-shadow: none;
 }
 
-/* ◩ — The Shore */
-input[data-task="◩"],
-li[data-task="◩"] > input,
-li[data-task="◩"] > p > input {
+/* 2 ◩ — Dual Inheritance */
+input[data-task="2"],
+li[data-task="2"] > input,
+li[data-task="2"] > p > input {
   border-radius: 4px;
 }
-input[data-task="◩"]:checked,
-li[data-task="◩"] > input:checked,
-li[data-task="◩"] > p > input:checked {
+input[data-task="2"]:checked,
+li[data-task="2"] > input:checked,
+li[data-task="2"] > p > input:checked {
   cursor: default;
   border: 1px solid transparent;
 }
 
 
-input[data-task="◩"]:checked:before,
-li[data-task="◩"] > input:checked:before,
-li[data-task="◩"] > p > input:checked:before {
+input[data-task="2"]:checked:before,
+li[data-task="2"] > input:checked:before,
+li[data-task="2"] > p > input:checked:before {
   cursor: default;
   content: '◩';
   color: var(--color-accent);
@@ -509,33 +508,33 @@ li[data-task="◩"] > p > input:checked:before {
 }
 
 
-.theme-light input[data-task="◩"]:checked, .theme-dark input[data-task="◩"]:checked,
-.theme-light li[data-task="◩"] > input:checked,
-.theme-dark li[data-task="◩"] > input:checked,
-.theme-light li[data-task="◩"] > p > input:checked,
-.theme-dark li[data-task="◩"] > p > input:checked {
+.theme-light input[data-task="2"]:checked, .theme-dark input[data-task="2"]:checked,
+.theme-light li[data-task="2"] > input:checked,
+.theme-dark li[data-task="2"] > input:checked,
+.theme-light li[data-task="2"] > p > input:checked,
+.theme-dark li[data-task="2"] > p > input:checked {
   background-color: transparent;
   border: 1px solid transparent;
   box-shadow: none;
 }
 
-/* ◉ — Ruinous Effigy */
-input[data-task="◉"],
-li[data-task="◉"] > input,
-li[data-task="◉"] > p > input {
+/* 4 ◉ — Ruinous Effigy */
+input[data-task="3"],
+li[data-task="3"] > input,
+li[data-task="3"] > p > input {
   border-radius: 4px;
 }
-input[data-task="◉"]:checked,
-li[data-task="◉"] > input:checked,
-li[data-task="◉"] > p > input:checked {
+input[data-task="3"]:checked,
+li[data-task="3"] > input:checked,
+li[data-task="3"] > p > input:checked {
   cursor: default;
   border: 1px solid transparent;
 }
 
 
-input[data-task="◉"]:checked:before,
-li[data-task="◉"] > input:checked:before,
-li[data-task="◉"] > p > input:checked:before {
+input[data-task="3"]:checked:before,
+li[data-task="3"] > input:checked:before,
+li[data-task="3"] > p > input:checked:before {
   cursor: default;
   content: '◉';
   color: var(--color-accent);
@@ -547,11 +546,11 @@ li[data-task="◉"] > p > input:checked:before {
 }
 
 
-.theme-light input[data-task="◉"]:checked, .theme-dark input[data-task="◉"]:checked,
-.theme-light li[data-task="◉"] > input:checked,
-.theme-dark li[data-task="◉"] > input:checked,
-.theme-light li[data-task="◉"] > p > input:checked,
-.theme-dark li[data-task="◉"] > p > input:checked {
+.theme-light input[data-task="3"]:checked, .theme-dark input[data-task="3"]:checked,
+.theme-light li[data-task="3"] > input:checked,
+.theme-dark li[data-task="3"] > input:checked,
+.theme-light li[data-task="3"] > p > input:checked,
+.theme-dark li[data-task="3"] > p > input:checked {
   background-color: transparent;
   border: 1px solid transparent;
   box-shadow: none;
@@ -590,6 +589,7 @@ input[type=checkbox] {
     var(--background-primary-alt);
 }
 
+/*
 .markdown-source-view.mod-cm6 .cm-gutters {
   color: var(--text-muted) !important;
   padding-inline-end: 0px;
@@ -599,7 +599,7 @@ input[type=checkbox] {
 .ͼ1 .cm-gutter {
   width: 18px;
 }
-
+*/
 .workspace-split.mod-right-split .workspace-leaf-resize-handle,
 .workspace-split.mod-horizontal .workspace-leaf-resize-handle,
 .workspace-split.mod-vertical .workspace-leaf-resize-handle,
