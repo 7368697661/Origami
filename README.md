@@ -6,8 +6,8 @@ A playful workhorse theme for Obsidian, inspired by paper and ink ✒️
 ![screenshot](https://user-images.githubusercontent.com/87339163/205531540-f3119cc2-8b96-4dac-b407-d78f4605bc95.png)
 Crafted with 💖 to mimic the soft tactility of a sheet of paper, with the word processing of digital tools ⌨️
 
-![screely-1670203601338](https://user-images.githubusercontent.com/87339163/205531564-bab3412d-1f95-46d8-9efb-61176f48113a.png)
-![screely-1670203621674](https://user-images.githubusercontent.com/87339163/205531574-5d942367-fbd6-43d8-9dc1-b0943ef59b9c.png)
+![light](https://user-images.githubusercontent.com/87339163/205531955-03a3ea2c-813f-436e-826f-0ad6da6d61ff.png)
+![dark](https://user-images.githubusercontent.com/87339163/205531962-9fc69474-f787-4a2a-9810-026d3e060c09.png)
 
 # Credits 🥰
 - ✨ **Carboxyl & pseudometa**, for the lovely name 💖
