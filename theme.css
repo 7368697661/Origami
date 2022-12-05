@@ -497,6 +497,8 @@ select:focus,
   content: '';
   border-radius: 20px;
   background: linear-gradient(40deg, var(--color-blue), var(--color-pink) 70%);
+  margin-top: 1px;
+  margin-left: -1px;
   transition: all 0.5s ease-in-out;
 }
 
@@ -978,14 +980,14 @@ div[aria-label='Help']:hover {
 
 .callout::after {
   content: '';
-  width: 142px;
-  height: 30px;
+  width: 48px;
+  height: 18px;
   border-radius: 8px;
   position: absolute;
   display: inline-block;
   background: rgb(var(--callout-color));
-  margin-top: -4px;
-  margin-left: 144px;
+  margin-top: 0.3%;
+  margin-left: auto;
   border: var(--border-lowOp);
   box-shadow: var(--cbs);
 }
@@ -1406,21 +1408,38 @@ div.kanban-plugin__markdown-preview-view > div > * {
 .is-hidden-frameless:not(.is-fullscreen).is-focused
   .titlebar-button-container.mod-right,
 .is-hidden-frameless:not(.is-fullscreen) .titlebar-button-container.mod-right {
-  background-color: var(--background-primary);
-  border-bottom-left-radius: 8px;
+  background-color: transparent;
+  color: var(--text-on-accent);
   box-shadow: none;
-  border-bottom: 2px dashed var(--background-primary-alt);
-  border-left: 2px dashed var(--background-primary-alt);
+  border: none;
 }
+
+.is-hidden-frameless:not(.is-fullscreen) .workspace-tabs.mod-top-right-space .workspace-tab-header-container {
+  padding-right: 0px;
+}
+
+/*
+.is-hidden-frameless:not(.is-fullscreen).is-focused
+  .titlebar-button-container.mod-right:hover,
+.is-hidden-frameless:not(.is-fullscreen) .titlebar-button-container.mod-right:hover {
+  opacity: 1;
+}
+*/
 
 .mod-linux .titlebar-button-container.mod-right,
 .mod-windows .titlebar-button-container.mod-right {
-  height: 75%;
-  width: 87px;
+  height: 18px;
+}
+
+.titlebar-button {
+  opacity: 0;
 }
 
 .titlebar-button:hover {
-  background-color: transparent;
+  background-color: var(--color-accent);
+  border-radius: 0px 0px 4px 4px;
+  opacity: 1;
+  animation: 0.35s fade cubic-bezier(0.645, 0.045, 0.355, 1);
 }
 
 .frontmatter-container .frontmatter-container-header {
@@ -1505,7 +1524,7 @@ div.kanban-plugin__markdown-preview-view > div > * {
 
 .mk-tree-wrapper button {
   background: none;
-  border: 1px solid var(--background-primary) !important;
+  border: 0px solid var(--background-primary) !important;
   box-shadow: none !important;
   margin: 0;
   height: 24px;
@@ -1570,4 +1589,22 @@ h2::after {
 .wb-page-search-bar-input {
   border-radius: 16px !important;
   background: var(--bg-lowOp) !important;
+}
+
+.clickable-icon {
+  border: none;
+}
+
+/* cite styling originally from the wonderful palatinate by eleanor konik */
+cite {
+background: transparent;
+border-radius: 8px;
+color: var(--text-faint);
+text-align: right;
+width: auto;
+display: block;
+}
+
+cite a:link {
+color: var(--text-on-accent);
 }
