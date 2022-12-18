@@ -1,6 +1,5 @@
-A Meticulously designed workhorse theme for [Obsidian](https://obsidian.md/).
-
 ![image (2)](https://user-images.githubusercontent.com/87339163/208270834-bb67ffd4-d2cb-4296-957b-9a4837ee9a84.png)
+A Meticulously designed workhorse theme for [Obsidian](https://obsidian.md/).
 
 Origami features extensive changes to the base UI, to create a clean and unobtrusive interface that you can work for hours in. Inspiration was taken from centuries of human typography and the timelessness of ink and folded paper ✒️
 
@@ -65,7 +64,7 @@ Embedding, or importing, typefaces was something I wanted to be careful with. I 
 
 Unfortunately, the Google hosted version of Fraunces didn’t expose the axi I needed for my CSS. So I needed to find a way to embed a variable font, and the normal font-face converter I typically used wouldn’t work.
 
-I eventually tracked down a stack overflow (of course) with an absolute legend who provided a wonderful embed to base64 encode variable fonts.
+I eventually tracked down a [stack overflow](https://stackoverflow.com/questions/26867893/converting-and-rendering-web-fonts-to-base64-keep-original-look) (of course 💖) with an absolute legend who provided a wonderful embed to base64 encode variable fonts.
 
 Finally, I was left with variables I could play around with to give different markdown demarking unique styling. Special consideration was spent looking over lists, settings, links, and many other typographical stylings.
 
@@ -77,9 +76,10 @@ Personally, I use Obsidian to bullet journal with daily notes. Since I have issu
 - Handpicked accent colors, also with Style Settings.
 - Canvas support, including UI and color options.
 - Special buttons!
-![bttnz](https://user-images.githubusercontent.com/87339163/207750815-c75e445f-7f0b-48aa-ae56-43f08db67927.gif)
 - Settings, prompts, tooltips, tags, links, and much more have been themed to create a unified experience.
 - `<cite> </cite>` support, courtesy of [Palatinate](https://github.com/eleanorkonik/-palatinate)
+
+![bttnz](https://user-images.githubusercontent.com/87339163/207750815-c75e445f-7f0b-48aa-ae56-43f08db67927.gif)
 
 ### Plugin Support
 
