@@ -1,10 +1,10 @@
-An unobtrusive theme inspired by paper for [Obsidian](https://obsidian.md/).
+A Meticulously designed workhorse theme for [Obsidian](https://obsidian.md/).
 
 ![image (2)](https://user-images.githubusercontent.com/87339163/208270834-bb67ffd4-d2cb-4296-957b-9a4837ee9a84.png)
 
 Origami features extensive changes to the base UI, to create a clean and unobtrusive interface that you can work for hours in. Inspiration was taken from centuries of human typography and the timelessness of ink and folded paper ✒️
 
-Origami was crafted with 💖 to mimic the soft tactility of a sheet of paper, and merge it with the word processing of digital tools ⌨️
+Origami was crafted with 💖 to mimic the soft tactility of a sheet of paper, and merge it with the word processing of digital tools ⌨️ and is my personal daily driver 🦾
 
 >🥳 Winner of Obsidian October (O_O) Best New Theme 2022 🥰
 
