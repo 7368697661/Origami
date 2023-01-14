@@ -7,39 +7,6 @@
    Many features taken from Ultra Lobster, i still need to write credit and documention so check that git for most of the credit for now, and im super sorry if that doesn't work for now!
 */
 
-/* 
-  - 
-    id: color-accent
-    title: Accent color light mode
-    type: variable-select
-    default: 'var(--color-blue)'
-    options:
-        - 
-            label: ❤️ Red
-            value: var(--color-red)
-        - 
-            label: 💚 Green
-            value: var(--color-green)
-        - 
-            label: 🧡 Orange
-            value: var(--color-orange)
-        - 
-            label: 💛 Yellow
-            value: var(--color-yellow)
-        - 
-            label: 🤍 Cyan
-            value: var(--color-cyan)
-        - 
-            label: 💙 Blue
-            value: var(--color-blue)
-        - 
-            label: 💜 Purple
-            value: var(--color-purple)
-        - 
-            label: 💖 Pink
-            value: var(--color-pink)
-*/
-
 /* Style Settings*/
 /* @settings
 name: Origami
@@ -47,11 +14,11 @@ id: o-theme-settings
 settings:
   - 
     id: accent-theme
-    title: ul-accent
-    description: Select your preferred dark mode scheme
+    title: Accent picker
+    description: Select from pre-selected accent colors
     type: class-select
     allowEmpty: false
-    default: o-red
+    default: 'o-blue'
     options:
         - 
             label: ❤️ Red
