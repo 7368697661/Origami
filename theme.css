@@ -995,7 +995,7 @@ hr {
 */
 .canvas-node-container {
   background-color: var(--background-primary);
-  border-radius: var(--radius-l);
+  border-radius: var(--radius-s);
   border: none;
   contain: strict;
   display: flex;
@@ -1006,7 +1006,6 @@ hr {
   top: 0;
   width: 100%;
   height: 100%;
-
 }
 
 .canvas-controls-group {
@@ -1074,12 +1073,12 @@ hr {
 
 .theme-light .canvas-node {
   box-shadow: rgba(var(--canvas-color), 0.05) 0px 8px 24px,
-  rgba(0, 0, 0, 0.15) 0px 6px 12px -2px,
-  rgba(0, 0, 0, 0.2) 0px 3px 7px -3px;
+  rgba(50, 50, 105, 0.15) 0px 2px 5px 0px,
+    rgba(0, 0, 0, 0.05) 0px 1px 1px 0px;
 }
 
 .canvas-node.is-themed .canvas-node-container, .canvas-node-container {
-  border: none;
+  border: var(--border-lowOp);
   box-shadow: none;
 }
 
