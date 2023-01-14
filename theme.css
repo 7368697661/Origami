@@ -7,17 +7,13 @@
    Many features taken from Ultra Lobster, i still need to write credit and documention so check that git for most of the credit for now, and im super sorry if that doesn't work for now!
 */
 
-/* Style Settings*/
-/* @settings
-name: Origami
-id: o-theme-settings
-settings:
+/* 
   - 
-		id: color-accent
-		title: Accent color light mode
-		type: variable-select
-		default: 'var(--color-blue)'
-		options:
+    id: color-accent
+    title: Accent color light mode
+    type: variable-select
+    default: 'var(--color-blue)'
+    options:
         - 
             label: ❤️ Red
             value: var(--color-red)
@@ -42,11 +38,55 @@ settings:
         - 
             label: 💖 Pink
             value: var(--color-pink)
+*/
+
+/* Style Settings*/
+/* @settings
+name: Origami
+id: o-theme-settings
+settings:
+  - 
+    id: accent-theme
+    title: ul-accent
+    description: Select your preferred dark mode scheme
+    type: class-select
+    allowEmpty: false
+    default: o-red
+    options:
+        - 
+            label: ❤️ Red
+            value: o-red
+        - 
+            label: 💚 Green
+            value: o-green
+        - 
+            label: 🧡 Orange
+            value: o-orange
+        - 
+            label: 💛 Yellow
+            value: o-yellow
+        - 
+            label: 🤍 Cyan
+            value: o-cyan
+        - 
+            label: 💙 Blue
+            value: o-blue
+        - 
+            label: 💜 Purple
+            value: o-purple
+        - 
+            label: 💖 Pink
+            value: o-pink
   - 
         id: o-colorful-headings
         title: Colorful Headings
         description: Turns on heading colors
         type: class-toggle
+  - 
+    id: o-list-distinct
+    title: Top Level Lists
+    description: Enable list header demarking
+    type: class-toggle
 */
 
 /*Fonts*/
@@ -614,22 +654,22 @@ body {
   --mono-rgb-0: 0, 0, 0;
   --mono-rgb-100: 255, 255, 255;
   --color-red-rgb: 234, 94, 65;
-  --color-red: #ea5e41;
-  --color-red-rgb: 234, 94, 65;
-  --color-green: #5fb26b;
-  --color-green-rgb: 95, 178, 107;
-  --color-orange: #ed874c;
-  --color-orange-rgb: 237, 135, 76;
-  --color-yellow: #e9bf55;
-  --color-yellow-rgb: 233, 191, 85;
-  --color-cyan: #47afeb;
-  --color-cyan-rgb: 71, 175, 235;
-  --color-blue: #2e8ccc;
-  --color-blue-rgb: 46, 140, 204;
-  --color-purple: #4b53d1;
-  --color-purple-rgb: 75, 83, 209;
-  --color-pink: #eb6faf;
-  --color-pink-rgb: 235, 111, 175;
+  --color-red: #ED725A;
+  --color-red-rgb: 237, 114, 90;
+  --color-green: #75BD80;
+  --color-green-rgb: 240, 156, 106;
+  --color-orange: #F09C6A;
+  --color-orange-rgb: 240, 156, 106;
+  --color-yellow: #ECC96F;
+  --color-yellow-rgb: 236, 201, 111;
+  --color-cyan: #5AB7ED;
+  --color-cyan-rgb: 90, 183, 237;
+  --color-blue: #489DD5;
+  --color-blue-rgb: 72, 157, 213;
+  --color-purple: #5D65D5;
+  --color-purple-rgb: 93, 101, 213;
+  --color-pink: #EE81B9;
+  --color-pink-rgb: 238, 129, 185;
   --color-base-00: #0A0A0A; /* background-primary (darker) */
   --color-base-10: #252525; /* background-primary-alt (darker) */
   --color-base-20: #131313;
@@ -779,32 +819,85 @@ body {
   --h6-color: var(--color-purple);
 }
 
-.o-colorful-headings body {
-  --heading-formatting: var(--text-faint);
-  --h1-color: var(--color-pink);
-  --h2-color: var(--color-blue);
-  --h3-color: inherit;
-  --h4-color: inherit;
-  --h5-color: inherit;
-  --h6-color: inherit;
-  --h1-font: inherit;
-  --h2-font: inherit;
-  --h3-font: inherit;
-  --h4-font: inherit;
-  --h5-font: inherit;
-  --h6-font: inherit;
-  --h1-line-height: 1;
-  --h2-line-height: 1;
-  --h3-line-height: 1;
-  --h4-line-height: 1;
-  --h5-line-height: var(--line-height-normal);
-  --h6-line-height: var(--line-height-normal);
-  --h1-size: 1em;
-  --h2-size: 1em;
-  --h3-size: 1em;
-  --h4-size: 1em;
-  --h5-size: 1em;
-  --h6-size: 1em;
+/* need to clean this up */
+.theme-dark.o-red {
+  --color-accent: var(--color-red);
+  --background-primary: #0D0908;
+}
+
+.theme-light.o-red {
+  --color-accent: var(--color-red);
+  --background-primary: #F9F3F1;
+}
+
+.theme-dark.o-green {
+  --color-accent: var(--color-green);
+  --background-primary: #0A0A0A;
+}
+
+.theme-light.o-green {
+  --color-accent: var(--color-green);
+  --background-primary: #F5F7F3;
+}
+
+.theme-dark.o-orange {
+  --color-accent: var(--color-orange);
+  --background-primary: #0D0A08;
+}
+
+.theme-light.o-orange {
+  --color-accent: var(--color-orange);
+  --background-primary: #F9F4F1;
+}
+
+.theme-dark.o-yellow {
+  --color-accent: var(--color-yellow);
+  --background-primary: #0D0B08;
+}
+
+.theme-light.o-yellow {
+  --color-accent: var(--color-yellow);
+  --background-primary: #F9F7F2;
+}
+
+.theme-dark.o-cyan {
+  --color-accent: var(--color-cyan);
+  --background-primary: #080B0D;
+}
+
+.theme-light.o-cyan {
+  --color-accent: var(--color-cyan);
+  --background-primary: #F1F6F9;
+}
+
+.theme-dark.o-blue {
+  --color-accent: var(--color-blue);
+  --background-primary: #070B0D;
+}
+
+.theme-light.o-blue {
+  --color-accent: var(--color-blue);
+  --background-primary: #F2F6F8;
+}
+
+.theme-dark.o-purple {
+  --color-accent: var(--color-purple);
+  --background-primary: #0A0A0A;
+}
+
+.theme-light.o-purple {
+  --color-accent: var(--color-purple);
+  --background-primary: #08080D;
+}
+
+.theme-dark.o-pink {
+  --color-accent: var(--color-pink);
+  --background-primary: #0C090A;
+}
+
+.theme-light.o-pink {
+  --color-accent: var(--color-pink);
+  --background-primary: #F9F2F5;
 }
 
 /* Main Styles */
@@ -1034,6 +1127,10 @@ hr {
   position: fixed;
   width: 44px;
   z-index: -10;
+}
+
+.vertical-tab-header {
+  background-color: transparent;
 }
 
 /*
@@ -1398,8 +1495,19 @@ select:focus,
 
 /*--Extras--*/
 
-/* Buttons 
-*/
+.o-list-distinct .HyperMD-list-line {
+  padding-bottom: 8px;
+}
+
+.o-list-distinct div.HyperMD-list-line.HyperMD-list-line-1.cm-line {
+  margin-top: 2px !important;
+  background-color: var(--background-primary);
+  padding-right: 8px;
+  border: var(--border-lowOp);
+  border-radius: 4px;
+  box-shadow: none;
+}
+
 
 /* Buttons 
 */
@@ -2061,17 +2169,4 @@ cite {
 
 cite a:link {
   color: var(--color-pink);
-}
-
-.HyperMD-list-line {
-  padding-bottom: 8px;
-}
-
-div.HyperMD-list-line.HyperMD-list-line-1.cm-line {
-  margin-top: 2px !important;
-  background-color: var(--background-primary);
-  padding-right: 8px;
-  border: var(--border-lowOp);
-  border-radius: 4px;
-  box-shadow: none;
 }
