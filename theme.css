@@ -1162,7 +1162,7 @@ hr {
   }
 }
 
-/* icon fades for lower left cluster */
+/* icon fades for lower left cluster 
 div[aria-label='Settings'] {
   opacity: 1 !important;
 }
@@ -1177,6 +1177,7 @@ div[aria-label='Help']:hover {
   opacity: 1 !important;
   animation: 0.35s fade cubic-bezier(0.645, 0.045, 0.355, 1);
 }
+*/
 
 /* mixture of Anubis's wonderful Rainbow Folders https://github.com/AnubisNekhet/AnuPpuccin <3 and my own css to mimic some nvim inspo :> */
 
@@ -1496,6 +1497,79 @@ select:focus,
 }
 
 /*--Extras--*/
+
+.workspace-ribbon.mod-left {
+  margin-top: 10%;
+  /* position: absolute; */
+}
+
+.workspace-ribbon.mod-left.is-collapsed {
+  /*transition: all 250ms 95ms ease-in-out;*/
+  background-color: var(--background-primary);
+  border-right-color: transparent;
+  border: var(--border-lowOp);
+  position: absolute;
+  border-radius: 0px 8px 8px 0px;
+  box-shadow: var(--shadow-lm-only);
+  /*width: 48px;*/
+}
+
+.workspace-ribbon {
+  padding: 8px 0px 8px 0px;
+  border: 1px solid var(--background-primary);
+}
+
+.side-dock-settings:not(.is-collapsed), .side-dock-actions:not(.is-collapsed) {
+  gap: var(--size-2-3);
+  /*padding-left: 8px;*/
+}
+
+.workspace-ribbon.mod-left.is-collapsed {
+  transition: all 250ms 95ms ease-in-out;
+  opacity: 0;
+}
+
+.workspace-ribbon.mod-left.is-collapsed:hover {
+  animation: pop 0.3s;
+  animation-direction: alternate;
+  opacity: 1;
+}
+
+.side-dock-settings {
+  margin-top: 5px;
+}
+
+.workspace-ribbon .sidebar-toggle-button {
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: var(--ribbon-width);
+  justify-content: center;
+}
+
+.workspace-ribbon.mod-left.is-collapsed:before {
+  background: var(--background-primary);
+  top: 0px;
+  left: 0px;
+  content: '';
+  height: 120%;
+  position: fixed;
+  width: 44px;
+  z-index: -10;
+  display: none;
+}
+
+/*
+.side-dock-settings, .side-dock-actions {
+  gap: var(--size-2-3);
+  padding-left: 4px;
+}
+*/
+
+.horizontal-tab-nav-item.is-active, .vertical-tab-nav-item.is-active {
+  background-color: var(--color-accent);
+  color: var(--text-on-accent);
+}
 
 .o-list-distinct .HyperMD-list-line {
   padding-bottom: 8px;
@@ -1847,7 +1921,6 @@ input[type=checkbox][data-task="!"]::after {
   background-color: var(--color-red);
   -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' class='icon icon-tabler icon-tabler-urgent' width='24' height='24' viewBox='0 0 24 24' stroke-width='2' stroke='currentColor' fill='none' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath stroke='none' d='M0 0h24v24H0z' fill='none'%3E%3C/path%3E%3Cpath d='M8 16v-4a4 4 0 0 1 8 0v4'%3E%3C/path%3E%3Cpath d='M3 12h1m8 -9v1m8 8h1m-15.4 -6.4l.7 .7m12.1 -.7l-.7 .7'%3E%3C/path%3E%3Crect x='6' y='16' width='12' height='4' rx='1'%3E%3C/rect%3E%3C/svg%3E");
 }
-
 
 li[data-task="?"] input[type=checkbox]:checked::after,
 input[type=checkbox][data-task="?"]::after {
