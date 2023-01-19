@@ -31,7 +31,7 @@ The font choices I finally landed with for Origami were the result of hours of r
 
 ![image (7)](https://user-images.githubusercontent.com/87339163/208278030-58e68327-5f0d-411e-9b90-92a6e0256441.png)
 
-A few of my favorite resources on good type design are Typewolf,[^11] Beautiful Web Type[^12] and a few type scale calculators[^13].[^14][^15]
+A few of my favorite resources on good type design are Libre Fonts by Womxn, Uncut,[^11] Beautiful Web Type[^12] and a few type scale calculators[^13].[^14][^15]
 
 Headings are based off of experiments with my personal site, and are tailored for my workflow Header one and two are meant to be used as a central landmark, with eye catching demarking.
 
@@ -42,13 +42,13 @@ Most of the time, you shouldn’t extend past heading 4 (warning: opinion). That
 Finally, the fonts I chose are as follows:
 
 **For UI**:
-- [IBM Plex Sans Condensed - Google Fonts](https://fonts.google.com/specimen/IBM+Plex+Sans+Condensed)
+- Currently I have swapped to Uncut Sans, for more neutral glyphs at small text size. Variable fonts also allow me to style weight and slant without tons of font imports.
 
 **For Text**:
-- [Fraunces](https://github.com/undercasetype/Fraunces)
+- [Fraunces](https://github.com/undercasetype/Fraunces) and Uncut sans have both been used here, for body text and links respectivly. In the future, I am going to add a toggle for a "serif dominant" and "sans-serif" dominant switch.
 
 **For monospace**:
-- [Heming](https://www.behance.net/gallery/142001915/Heming-Free-Variable-Font?locale=en_US)
+- Evil Martin
 
 I may spend way too much time researching typefaces. The end result is a few that I absolutely adore. These are typefaces that have withstood-stood my daily usage. And I say that having tried nearly every font on Google, Adobe, and Envato.
 
