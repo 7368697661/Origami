@@ -624,10 +624,10 @@ body {
   --mono-rgb-0: 0, 0, 0;
   --mono-rgb-100: 255, 255, 255;
   --color-red: #ff6b6b;
-  --color-red-hsl: hsl(0, 100%, 71%;
+  --color-red-hsl: 0, 100%, 71%;
   --color-red-rgb: 234, 94, 65;
   --color-green: #69db7c;
-  --color-green-hsl: 130, 61.3%, 63.5);
+  --color-green-hsl: 130, 61.3%, 63.5%;
   --color-green-rgb: 105, 219, 124;
   --color-orange: #ffc078;
   --color-orange-hsl: 32, 100%, 73.5%;
@@ -870,7 +870,7 @@ body {
 }
 
 .theme-dark.o-cyan {
-  --color-accent: hsl(var(--color-cyan-rgb));
+  --color-accent: hsl(var(--color-cyan-hsl));
   --color-accent-rgb: var(--color-cyan-rgb);
   --color-accent-hsl: var(--color-cyan-hsl);
   --color-accent-1: var(--color-green);
@@ -878,7 +878,7 @@ body {
 }
 
 .theme-light.o-cyan {
-  --color-accent: hsl(var(--color-cyan-rgb));
+  --color-accent: hsl(var(--color-cyan-hsl));
   --color-accent-rgb: var(--color-cyan-rgb);
   --color-accent-hsl: var(--color-cyan-hsl);
   --color-accent-1: var(--color-green);
@@ -2056,10 +2056,11 @@ h2::after {
 }
 
 /* review */
+/* The switch - the box around the slider */
 .checkbox-container {
   background-color: var(--background-primary);
   border: var(--border-lowOp);
-  transition: all 0.5s ease-in-out;
+  transition: all 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940);
   border-radius: 30px;
 }
 
@@ -2069,13 +2070,13 @@ h2::after {
   background-image: linear-gradient(40deg, var(--color-accent), var(--color-accent-1) 70%);
   margin-top: 1px;
   margin-left: -1px;
-  transition: all 0.5s ease-in-out;
+  transition: all 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940);
 }
 
 .checkbox-container.is-enabled {
   background-color: var(--bg-lowOp);
   outline: none;
-  transition: all 0.5s ease-in-out;
+  transition: all 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940);
 }
 
 .checkbox-container:focus-within {
@@ -2086,6 +2087,7 @@ h2::after {
   box-shadow: none;
 }
 
+/* note checkboxes */
 input[type=checkbox] {
   -webkit-appearance: none;
   appearance: none;
@@ -2106,7 +2108,6 @@ input[type=checkbox]:hover {
   appearance: none;
   border-radius: var(--checkbox-radius);
   border: none;
-  position: relative;
   transition: box-shadow 0.15s ease-in-out;
 }
 
