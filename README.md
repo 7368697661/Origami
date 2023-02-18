@@ -18,6 +18,9 @@ Offered:
 - soft, low contrast (WIP)
 - custom (set colors via style settings)
 
+![New Project (6)](https://user-images.githubusercontent.com/87339163/219827939-1354c573-8911-4396-bcce-5b3d2230bba6.png)
+_A dark mode designed to help you stay organized & focued on what matters: writing_
+
 ## Typography
 Todo: rewrite
 
