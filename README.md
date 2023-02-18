@@ -1,4 +1,5 @@
-![image (2)](https://user-images.githubusercontent.com/87339163/208270834-bb67ffd4-d2cb-4296-957b-9a4837ee9a84.png)
+![image (12)](https://user-images.githubusercontent.com/87339163/219824311-e78da078-54f1-4818-9d11-7d68b1409491.png)
+
 A Meticulously designed workhorse theme for [Obsidian](https://obsidian.md/).
 
 Origami features extensive changes to the base UI, to create a clean and unobtrusive interface that you can work for hours in. Inspiration was taken from centuries of human typography and the timelessness of ink and folded paper ✒️
