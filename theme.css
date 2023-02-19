@@ -1502,7 +1502,7 @@ body {
 */
 a.tag,
 .cm-hashtag {
-	font-weight: 700;
+	font-weight: 550;
 	line-height: 1;
 
 	color: var(--text-muted);
@@ -1517,13 +1517,14 @@ a.tag,
 
 	transition: var(--transition-03);
 
-	font-variation-settings: "wght" 700;
+	font-variation-settings: "wght" 550;
 }
 
 a.tag:hover,
 .cm-hashtag:hover {
 	color: var(--text-accent);
 	background: var(--tag-background);
+	font-variation-settings: "wght" 550;
 }
 
 .cm-hashtag.cm-hashtag-begin {
