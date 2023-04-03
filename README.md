@@ -35,7 +35,7 @@ Variable fonts are used wherever possible to reduce filesize and increase utilit
 The default title typeface is [Fraunces](https://github.com/undercasetype/Fraunces), while the default body and UI typeface is [General Sans](https://www.fontshare.com/fonts/general-sans). Finally, the monospace typeface is [Evil Martin](https://github.com/evilmartians/mono). In addition, I am constantly making adjustments to links, code blocks, text emphasis, block quotes, canvas, and callouts to ensure a consistent and harmonious typographic experience throughout the theme.
 
 ### ✨ Extras
-- Custom folder collapse styling, originally by `@anbis` and adapted by myself.
+- Custom folder collapse styling, based off of the works of `@anubis` and 
 - Colorful headings with Style Settings.
 - Handpicked accent colors, also with Style Settings.
 - Canvas support, including UI and color options.
@@ -58,8 +58,9 @@ The default title typeface is [Fraunces](https://github.com/undercasetype/Fraunc
 
 ## 🥰 Credits 
 - ✨ **Carboxyl & Pseudometa**, for the lovely name 💖
-- 🐕**Anubis** for their rainbow folders
 - 🖥️ **Lukemt** for their smooth live headers
+- 🐕**Anubis** for their rainbow folders
+- 📂 PspStreet51#6517 for their round folders
 - 💎 Obsidian, for the amazing program to theme
 - ⌨️ The amazing **plugin** developers, for their time
 - 🎨 The gifted **theme** community, for their inspiration
@@ -71,13 +72,13 @@ The default title typeface is [Fraunces](https://github.com/undercasetype/Fraunc
 ## 🏗️ Todo
 - [ ] Polish aspects of the theme
 - [ ] Refactor to clean up and move more clunk to new variables
-- [ ] Style Settings
-- [ ] New color schemes
-- [ ] Monochrome mode
-- [ ] Fix font hardcoding for other languages
-- [ ] Sans serifed font
-- [ ] Maybe monospace body font?
-- [ ] Make better graphics to finish showing off the theme
+- [/] Style Settings
+- [x] New color schemes
+- [x] Monochrome mode
+- [?] Fix font hardcoding for other languages
+- [x] Sans serifed font
+- [x] Maybe monospace body font?
+- [X] Make better graphics to finish showing off the theme
 
 ## 📕 **Other, about**
 
