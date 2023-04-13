@@ -1,5 +1,8 @@
 # Origami
 
+## THEME DEVELOPMENT STATUS: PENDING
+taking a mental health break, apologies for any inconvenience
+
 A theme made with 💖 for [Obsidian](https://obsidian.md/) that prioritizes text & design and puts the focus squarely on your words.
 
 ![image (12)](https://user-images.githubusercontent.com/87339163/219824396-6c82e82c-ca5d-4ef7-81cb-d975e875cbe8.png)
