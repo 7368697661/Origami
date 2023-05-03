@@ -1,7 +1,11 @@
 # Origami
 
-## THEME DEVELOPMENT STATUS: PENDING
-taking a mental health break, apologies for any inconvenience
+## THEME DEVELOPMENT STATUS: REFACTOR
+need to do a big ole rewrite of style settings since half of the defaults wont stick. i want to provide a better 'out of the box' experience so i will have an update for origami when that rewrite does not remove current features. to minimize disruption, i am mostly developing here: https://github.com/7368697661/working-edits
+
+check it out if you want the latest edits!
+
+***
 
 A theme made with 💖 for [Obsidian](https://obsidian.md/) that prioritizes text & design and puts the focus squarely on your words.
 
