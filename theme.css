@@ -3743,6 +3743,15 @@ cm-s-obsidian .HyperMD-codeblock,
 	color: var(--color-accent);
 }
 
+.cm-s-obsidian span.cm-inline-code {
+    color: var(--code-normal);
+    font-size: var(--code-size);
+    background-color: var(--background-secondary);
+    vertical-align: baseline;
+    border-radius: 4px;
+    padding: 0 4px;
+}
+
 /* Feature Toggles
 */
 
