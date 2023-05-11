@@ -88,8 +88,14 @@ settings:
             label: Architect
             value: o-arch-l
         -
+            label: Minimum
+            value: o-min-l
+        -
             label: Soft
             value: o-soft-l
+        -
+            label: Timberwolf
+            value: o-timber-l
         -
             label: Creation
             value: o-light-l
@@ -138,6 +144,9 @@ settings:
             label: Soft
             value: o-soft-d
         -
+            label: Timberwolf
+            value: o-timber-d
+        -
             label: CONTROL
             value: o-control-d
         -
@@ -146,6 +155,9 @@ settings:
         -
             label: Shark Time
             value: o-shark-d
+        -
+            label: Minimum
+            value: o-min-d
         -
             label: Lobster Time
             value: ul-lobstertime-dt
@@ -439,6 +451,9 @@ settings:
         - 'TerminusTTF'
         - 'Aspekta'
         - 'General Sans'
+        - 'IBM Plex Sans'
+        - 'Inter'
+        - 'Space Grotesk'
 
   -
     id: o-font-title
@@ -453,6 +468,9 @@ settings:
         - 'TerminusTTF'
         - 'Aspekta'
         - 'General Sans'
+        - 'IBM Plex Sans'
+        - 'Inter'
+        - 'Space Grotesk'
 
   -
     id: responsive-text
@@ -502,20 +520,6 @@ settings:
             label: Flat
             value: o-headings-flt
 
-  -
-    id: o-header-type
-    title: Header 1 Typeface
-    type: class-select
-    allowEmpty: true
-    default: 'o-headings-opn'
-    options:
-        -
-            label: Fraunces
-            value: o-header-fr
-        -
-            label: Martian Mono
-            value: o-header-mn
-
   - 
     id: o-colorfo-headings
     title: Rainbow Headers
@@ -532,6 +536,108 @@ settings:
     type: variable-number
     default: 1
     format: em
+
+  -
+    id: o-header1-type
+    title: Header 1 Typeface
+    type: variable-select
+    allowEmpty: true
+    default: ''
+    options:
+        - 'Getai'
+        - 'Fraunces'
+        - 'Nightingale'
+        - 'TerminusTTF'
+        - 'Aspekta'
+        - 'General Sans'
+        - 'IBM Plex Sans'
+        - 'Inter'
+        - 'Space Grotesk'
+
+  -
+    id: o-header2-type
+    title: Header 2 Typeface
+    type: variable-select
+    allowEmpty: true
+    default: ''
+    options:
+        - 'Getai'
+        - 'Fraunces'
+        - 'Nightingale'
+        - 'TerminusTTF'
+        - 'Aspekta'
+        - 'General Sans'
+        - 'IBM Plex Sans'
+        - 'Inter'
+        - 'Space Grotesk'
+
+  -
+    id: o-header3-type
+    title: Header 3 Typeface
+    type: variable-select
+    allowEmpty: true
+    default: ''
+    options:
+        - 'Getai'
+        - 'Fraunces'
+        - 'Nightingale'
+        - 'TerminusTTF'
+        - 'Aspekta'
+        - 'General Sans'
+        - 'IBM Plex Sans'
+        - 'Inter'
+        - 'Space Grotesk'
+
+  -
+    id: o-header4-type
+    title: Header 4 Typeface
+    type: variable-select
+    allowEmpty: true
+    default: ''
+    options:
+        - 'Getai'
+        - 'Fraunces'
+        - 'Nightingale'
+        - 'TerminusTTF'
+        - 'Aspekta'
+        - 'General Sans'
+        - 'IBM Plex Sans'
+        - 'Inter'
+        - 'Space Grotesk'
+
+  -
+    id: o-header5-type
+    title: Header 5 Typeface
+    type: variable-select
+    allowEmpty: true
+    default: ''
+    options:
+        - 'Getai'
+        - 'Fraunces'
+        - 'Nightingale'
+        - 'TerminusTTF'
+        - 'Aspekta'
+        - 'General Sans'
+        - 'IBM Plex Sans'
+        - 'Inter'
+        - 'Space Grotesk'
+
+  -
+    id: o-header6-type
+    title: Header 6 Typeface
+    type: variable-select
+    allowEmpty: true
+    default: ''
+    options:
+        - 'Getai'
+        - 'Fraunces'
+        - 'Nightingale'
+        - 'TerminusTTF'
+        - 'Aspekta'
+        - 'General Sans'
+        - 'IBM Plex Sans'
+        - 'Inter'
+        - 'Space Grotesk'
 
   -
     id: o-header-line-accent
@@ -697,6 +803,8 @@ settings:
 
 /* imports
 */
+
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Inter:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap');
 
 /* Fraunces
 */
@@ -918,17 +1026,17 @@ body {
 	--color-pink: #FA99CD;
 	--color-pink-hsl: 328, 91%, 79%;
 	--canvas-color: 245, 245, 245;
-	--color-base-00: #141414; /* background-primary */
-	--color-base-10: #242424; /* background-primary-alt */
-	--color-base-20: #171717; /* background-secondary */
-	--color-base-25: #2A2A2A; /* idk lol */
-	--color-base-30: #262626; /* background-modifier-border */
-	--color-base-35: #3F3F3F; /* background-modifier-border-hover */
-	--color-base-40: #555; /* background-modifier-border-focus */
-	--color-base-50: #DEDEDE; /* text-faint */
-	--color-base-60: #5C6370; /* also no clue */
-	--color-base-70: #FCFCFA; /* text-muted */
-	--color-base-100: #FFF; /* text-normal */
+    --color-base-00: #1e1e1e;
+    --color-base-10: #242424;
+    --color-base-20: #262626;
+    --color-base-25: #2a2a2a;
+    --color-base-30: #363636;
+    --color-base-35: #3F3F3F;
+    --color-base-40: #555;
+    --color-base-50: #666;
+    --color-base-60: #999;
+    --color-base-70: #bababa;
+    --color-base-100: #dadada;
 
 	--color-accent-hsl: var(--accent-h), var(--accent-s), var(--accent-l);
 	--color-accent: hsl(var(--accent-h) var(--accent-s) var(--accent-l));
@@ -1265,6 +1373,87 @@ body {
     --h2-color: #ffc8dd;
 }
 
+/* minimum
+*/
+.o-min-l.theme-light {
+	color-scheme: light;
+	--highlight-mix-blend-mode: darken;
+	--mono-rgb-0: 255, 255, 255;
+	--mono-rgb-100: 0, 0, 0;
+	--color-red-rgb: 233, 49, 71;
+	--color-red: #E93147;
+	--color-red-hsl: 353, 81%, 55%;
+	--color-green-rgb: 8, 185, 78;
+	--color-green: #08B94E;
+	--color-green-hsl: 144, 92%, 38%;
+	--color-orange-rgb: 236, 117, 0;
+	--color-orange: #EC7500;
+	--color-orange-hsl: 30, 100%, 46%;
+	--color-yellow-rgb: 224, 172, 0;
+	--color-yellow: #E0AC00;
+	--color-yellow-hsl: 46, 100%, 44%;
+	--color-cyan-rgb: 0, 191, 188;
+	--color-cyan: #00BFBC;
+	--color-cyan-hsl: 179, 100%, 37%;
+	--color-blue-rgb: 8, 109, 221;
+	--color-blue: #086DDD;
+	--color-blue-hsl: 212, 93%, 45%;
+	--color-purple-rgb: 120, 82, 238;
+	--color-purple: #7852EE;
+	--color-purple-hsl: 255, 82%, 63%;
+	--color-pink-rgb: 213, 57, 132;
+	--color-pink: #D53984;
+	--color-pink-hsl: 331, 65%, 53%;
+	--canvas-color: 51, 51, 49;
+    --color-base-00: #ffffff;
+    --color-base-05: #fcfcfc;
+    --color-base-10: #fafafa;
+    --color-base-20: #ffffff;
+    --color-base-25: #e3e3e3;
+    --color-base-30: #ffffff;
+    --color-base-35: #d4d4d4;
+    --color-base-40: #ffffff;
+    --color-base-50: #ababab;
+    --color-base-60: #707070;
+    --color-base-70: #5a5a5a;
+    --color-base-100: #222222;
+}
+
+.o-min-d.theme-dark {
+    color-scheme: dark;
+    --highlight-mix-blend-mode: lighten;
+    --mono-rgb-0: 0, 0, 0;
+    --mono-rgb-100: 255, 255, 255;
+	--color-red-rgb: 251, 70, 76;
+	--color-red: #fb464c;
+	--color-orange-rgb: 233, 151, 63;
+	--color-orange: #E9973F;
+	--color-yellow-rgb: 224, 222, 113;
+	--color-yellow: #E0DE71;
+	--color-green-rgb: 68, 207, 110;
+	--color-green: #44CF6E;
+	--color-cyan-rgb: 83, 223, 221;
+	--color-cyan: #53DFDD;
+	--color-blue-rgb: 2, 122, 255;
+	--color-blue: #027aff;
+	--color-purple-rgb: 168, 130, 255;
+	--color-purple: #a882ff;
+	--color-pink-rgb: 250, 153, 205;
+	--color-pink: #FA99CD;
+    --canvas-color: 245, 245, 245;
+    --color-base-00: #1e1e1e;
+    --color-base-10: #242424;
+    --color-base-20: #1e1e1e;
+    --color-base-25: #2a2a2a;
+    --color-base-30: #1e1e1e;
+    --color-base-35: #3F3F3F;
+    --color-base-40: #1e1e1e;
+    --color-base-50: #666;
+    --color-base-60: #999;
+    --color-base-70: #bababa;
+    --color-base-100: #dadada;
+}
+
 /* paperlike
 */
 .o-light-l.theme-light {
@@ -1347,9 +1536,9 @@ body {
 	--color-base-10: #FFFAEB;
 	--color-base-20: #EEE8D5;
 	--color-base-25: #B7B6B2;
-	--color-base-30: #586E75;
+	--color-base-30: #B7B6B2;
 	--color-base-35: #EEE8D5;
-	--color-base-40: #586E75;
+	--color-base-40: #B7B6B2;
 	--color-base-50: #93A1A1;
 	--color-base-60: #586E75;
 	--color-base-70: #657B83;
@@ -1395,6 +1584,95 @@ body {
 	--color-base-60: #93A1A1;
 	--color-base-70: #839496;
 	--color-base-100: #93A1A1;
+}
+
+/* timberwolf theme
+*/
+.o-timber-l.theme-light {
+	color-scheme: light;
+	--highlight-mix-blend-mode: darken;
+	--mono-rgb-0: 255, 255, 255;
+	--mono-rgb-100: 0, 0, 0;
+	--color-red-rgb: 154, 69, 60;
+	--color-red: #9A453C;
+	--color-red-hsl: 6, 44%, 42%;
+	--color-green-rgb: 139, 164, 129;
+	--color-green: #8BA481;
+	--color-green-hsl: 103, 16%, 57%;
+	--color-orange-rgb: 241, 187, 138;
+	--color-orange: #F1BB8A;
+	--color-orange-hsl: 29, 79%, 74%;
+	--color-yellow-rgb: 228, 188, 127;
+	--color-yellow: #E4BC7F;
+	--color-yellow-hsl: 36, 65%, 70%;
+	--color-cyan-rgb: 155, 199, 189;
+	--color-cyan: #9BC7BD;
+	--color-cyan-hsl: 166, 28%, 69%;
+	--color-blue-rgb: 23, 92, 89;
+	--color-blue: #175C59;
+	--color-blue-hsl: 177, 60%, 23%;
+	--color-purple-rgb: 166, 154, 181;
+	--color-purple: #A69AB5;
+	--color-purple-hsl: 267, 15%, 66%;
+	--color-pink-rgb: 239, 121, 106;
+	--color-pink: #EF796A;
+	--color-pink-hsl: 7, 81%, 68%;
+	--canvas-color: 10, 10, 10;
+	--color-base-00: #dad7cd; /* background-primary */
+	--color-base-05: #FEFEFE; /* background-secondary-alt in light mode, for some reason */
+	--color-base-10: #A3B18A; /* background-primary-alt */
+	--color-base-20: #CDCEBD; /* background-secondary */
+	--color-base-25: #A3B18A; /* idk lol */
+	--color-base-30: #a3b18a; /* background-modifier-border */
+	--color-base-35: #3A5A40; /* background-modifier-border-hover */
+	--color-base-40: var(--color-base-30); /* background-modifier-border-focus */
+	--color-base-50: #3A5A40; /* text-faint */
+	--color-base-60: #344E41; /* also no clue */
+	--color-base-70: #1A231F; /* text-muted */
+	--color-base-100: #090B0A; /* text-normal */
+}
+
+.o-timber-d.theme-dark {
+	color-scheme: dark;
+	--highlight-mix-blend-mode: lighten;
+	--mono-rgb-0: 0, 0, 0;
+	--mono-rgb-100: 255, 255, 255;
+	--color-red-rgb: 154, 69, 60;
+	--color-red: #9A453C;
+	--color-red-hsl: 6, 44%, 42%;
+	--color-green-rgb: 139, 164, 129;
+	--color-green: #8BA481;
+	--color-green-hsl: 103, 16%, 57%;
+	--color-orange-rgb: 241, 187, 138;
+	--color-orange: #F1BB8A;
+	--color-orange-hsl: 29, 79%, 74%;
+	--color-yellow-rgb: 228, 188, 127;
+	--color-yellow: #E4BC7F;
+	--color-yellow-hsl: 36, 65%, 70%;
+	--color-cyan-rgb: 155, 199, 189;
+	--color-cyan: #9BC7BD;
+	--color-cyan-hsl: 166, 28%, 69%;
+	--color-blue-rgb: 23, 92, 89;
+	--color-blue: #175C59;
+	--color-blue-hsl: 177, 60%, 23%;
+	--color-purple-rgb: 166, 154, 181;
+	--color-purple: #A69AB5;
+	--color-purple-hsl: 267, 15%, 66%;
+	--color-pink-rgb: 239, 121, 106;
+	--color-pink: #EF796A;
+	--color-pink-hsl: 7, 81%, 68%;
+	--canvas-color: 245, 245, 245;
+	--color-base-00: #121715; /* background-primary */
+	--color-base-10: #1A231F; /* background-primary-alt */
+	--color-base-20: #0E1110; /* background-secondary */
+	--color-base-25: #2A2A2A; /* idk lol */
+	--color-base-30: #344E41; /* background-modifier-border */
+	--color-base-35: #635E58; /* background-modifier-border-hover */
+	--color-base-40: #344E41; /* background-modifier-border-focus */
+	--color-base-50: #588157; /* text-faint */
+	--color-base-60: #A3B18A; /* also no clue */
+	--color-base-70: #CDCEBD; /* text-muted */
+	--color-base-100: #dad7cd; /* text-normal */
 }
 
 /* gruvbox
@@ -2335,6 +2613,12 @@ body {
 	--h4-weight: var(--h4-weight);
 	--h5-weight: var(--h5-weight);
 	--h6-weight: var(--h6-weight);
+	--h1-font: var(--o-header1-type);
+	--h2-font: var(--o-header2-type);
+	--h3-font: var(--o-header3-type);
+	--h4-font: var(--o-header4-type);
+	--h5-font: var(--o-header5-type);
+	--h6-font: var(--o-header6-type);
 	--o-header-line-accent: var(--background-modifier-border);
 
 	/* Text
@@ -3653,8 +3937,8 @@ em,
 
 /* callouts
 */
-.callout::before {
-	/* position: absolute; */
+/* .callout::before {
+	/* position: absolute; 
 	display: block;
 	content: "";
 
@@ -3663,7 +3947,7 @@ em,
 
 	background: rgb(var(--callout-color));
 	box-shadow: 0 calc(-1 * var(--size-4-4)) 0 var(--size-4-4) rgb(var(--callout-color));
-	/* left: 15px; */
+	/* left: 15px; 
 	margin-left: -8px;
 }
 
@@ -3681,7 +3965,7 @@ em,
 	top: 7px;
 
 	border-radius: 100vmax;
-}
+} */
 
 .callout {
 	background: rgb(var(--callout-color) 0.05);
@@ -4304,52 +4588,35 @@ cm-s-obsidian .HyperMD-codeblock,
 
 .o-canvas-fancycolor10.theme-light .canvas-node.is-themed.mod-canvas-color-1 .canvas-node-content {
 	background-image:
-		linear-gradient(
-			135deg,
-			hsl(0 92% 76%) 0%,
-			hsl(352 92% 76%) 6%,
-			hsl(345 87% 76%) 12%,
-			hsl(337 79% 76%) 18%,
-			hsl(328 69% 75%) 24%,
-			hsl(317 56% 75%) 29%,
-			hsl(300 42% 74%) 35%,
-			hsl(281 48% 77%) 41%,
-			hsl(263 54% 79%) 47%,
-			hsl(247 57% 81%) 53%,
-			hsl(231 61% 80%) 59%,
-			hsl(221 65% 79%) 65%,
-			hsl(214 64% 77%) 71%,
-			hsl(209 62% 76%) 76%,
-			hsl(204 58% 75%) 82%,
-			hsl(200 53% 74%) 88%,
-			hsl(196 47% 74%) 94%,
-			hsl(191 40% 74%) 100%
-		);
+	linear-gradient(
+		45deg,
+		hsl(0deg 87% 79%) 0%,
+		hsl(360deg 87% 78%) 21%,
+		hsl(360deg 87% 77%) 30%,
+		hsl(359deg 87% 75%) 39%,
+		hsl(359deg 87% 74%) 46%,
+		hsl(359deg 87% 73%) 54%,
+		hsl(359deg 86% 72%) 61%,
+		hsl(358deg 86% 71%) 69%,
+		hsl(358deg 86% 70%) 79%,
+		hsl(358deg 85% 68%) 100%
+	  );
 }
 
 .o-canvas-fancycolor10.theme-dark .canvas-node.is-themed.mod-canvas-color-1 .canvas-node-content {
 	background-image:
 		linear-gradient(
-			135deg,
-			hsl(268 64% 29%) 0%,
-			hsl(283 56% 30%) 14%,
-			hsl(298 50% 31%) 21%,
-			hsl(311 50% 35%) 26%,
-			hsl(320 51% 39%) 30%,
-			hsl(327 51% 42%) 35%,
-			hsl(332 51% 45%) 39%,
-			hsl(336 52% 48%) 43%,
-			hsl(340 54% 51%) 46%,
-			hsl(343 60% 54%) 50%,
-			hsl(350 60% 59%) 54%,
-			hsl(357 60% 63%) 57%,
-			hsl(3 62% 66%) 61%,
-			hsl(9 66% 68%) 65%,
-			hsl(14 71% 69%) 69%,
-			hsl(18 75% 70%) 74%,
-			hsl(22 80% 72%) 79%,
-			hsl(26 85% 73%) 86%,
-			hsl(29 91% 74%) 100%
+			45deg,
+			hsl(15deg 82% 54%) 0%,
+			hsl(14deg 83% 54%) 11%,
+			hsl(14deg 83% 53%) 22%,
+			hsl(13deg 84% 53%) 33%,
+			hsl(13deg 84% 53%) 44%,
+			hsl(12deg 85% 53%) 56%,
+			hsl(11deg 85% 53%) 67%,
+			hsl(11deg 86% 52%) 78%,
+			hsl(10deg 86% 52%) 89%,
+			hsl(9deg 87% 52%) 100%
 		);
 }
 
@@ -4357,24 +4624,16 @@ cm-s-obsidian .HyperMD-codeblock,
 	background-image:
 		linear-gradient(
 			135deg,
-			hsl(0 83% 75%) 0%,
-			hsl(3 86% 74%) 6%,
-			hsl(6 89% 74%) 12%,
-			hsl(9 91% 74%) 18%,
-			hsl(11 93% 74%) 24%,
-			hsl(14 94% 74%) 29%,
-			hsl(16 95% 74%) 35%,
-			hsl(19 95% 74%) 41%,
-			hsl(21 95% 73%) 47%,
-			hsl(23 95% 73%) 53%,
-			hsl(26 94% 73%) 59%,
-			hsl(28 94% 73%) 65%,
-			hsl(30 92% 73%) 71%,
-			hsl(32 91% 73%) 76%,
-			hsl(35 89% 73%) 82%,
-			hsl(37 87% 73%) 88%,
-			hsl(39 84% 73%) 94%,
-			hsl(42 81% 73%) 100%
+			hsl(16deg 100% 76%) 0%,
+			hsl(20deg 100% 76%) 21%,
+			hsl(23deg 100% 76%) 30%,
+			hsl(27deg 100% 77%) 39%,
+			hsl(30deg 100% 77%) 46%,
+			hsl(34deg 100% 77%) 54%,
+			hsl(37deg 100% 78%) 61%,
+			hsl(41deg 100% 79%) 69%,
+			hsl(45deg 100% 80%) 79%,
+			hsl(49deg 100% 81%) 100%
 		);
 }
 
@@ -4382,17 +4641,16 @@ cm-s-obsidian .HyperMD-codeblock,
 	background-image:
 		linear-gradient(
 			135deg,
-			hsl(228 36% 34%) 0%,
-			hsl(272 31% 40%) 2%,
-			hsl(315 39% 45%) 5%,
-			hsl(336 59% 53%) 11%,
-			hsl(354 84% 62%) 22%,
-			hsl(16 100% 61%) 46%,
-			hsl(14 97% 59%) 73%,
-			hsl(12 94% 58%) 86%,
-			hsl(9 91% 57%) 93%,
-			hsl(6 88% 56%) 97%,
-			hsl(2 85% 55%) 100%
+			hsl(29deg 82% 54%) 0%,
+			hsl(28deg 83% 53%) 11%,
+			hsl(28deg 83% 53%) 22%,
+			hsl(27deg 84% 53%) 33%,
+			hsl(26deg 84% 53%) 44%,
+			hsl(25deg 85% 53%) 56%,
+			hsl(25deg 85% 52%) 67%,
+			hsl(24deg 86% 52%) 78%,
+			hsl(23deg 86% 52%) 89%,
+			hsl(22deg 87% 52%) 100%
 		);
 }
 
@@ -4400,25 +4658,16 @@ cm-s-obsidian .HyperMD-codeblock,
 	background-image:
 		linear-gradient(
 			135deg,
-			hsl(42 83% 75%) 0%,
-			hsl(40 84% 74%) 6%,
-			hsl(38 84% 74%) 11%,
-			hsl(37 84% 74%) 17%,
-			hsl(35 84% 74%) 22%,
-			hsl(34 84% 73%) 28%,
-			hsl(32 83% 73%) 33%,
-			hsl(31 83% 73%) 39%,
-			hsl(29 82% 73%) 44%,
-			hsl(28 81% 73%) 50%,
-			hsl(32 77% 72%) 56%,
-			hsl(37 71% 72%) 61%,
-			hsl(42 66% 71%) 67%,
-			hsl(47 59% 71%) 72%,
-			hsl(54 52% 71%) 78%,
-			hsl(64 48% 72%) 83%,
-			hsl(74 52% 75%) 89%,
-			hsl(84 56% 78%) 94%,
-			hsl(97 60% 81%) 100%
+			hsl(60deg 89% 72%) 0%,
+			hsl(59deg 91% 73%) 21%,
+			hsl(57deg 92% 74%) 30%,
+			hsl(56deg 94% 76%) 39%,
+			hsl(55deg 96% 77%) 46%,
+			hsl(53deg 97% 78%) 54%,
+			hsl(52deg 98% 79%) 61%,
+			hsl(51deg 99% 80%) 69%,
+			hsl(50deg 100% 80%) 79%,
+			hsl(49deg 100% 81%) 100%
 		);
 }
 
@@ -4426,17 +4675,16 @@ cm-s-obsidian .HyperMD-codeblock,
 	background-image:
 		linear-gradient(
 			135deg,
-			hsl(49 94% 54%) 0%,
-			hsl(38 100% 61%) 6%,
-			hsl(26 100% 66%) 14%,
-			hsl(11 100% 71%) 23%,
-			hsl(355 100% 74%) 33%,
-			hsl(342 74% 68%) 46%,
-			hsl(334 65% 62%) 59%,
-			hsl(326 57% 55%) 72%,
-			hsl(317 52% 48%) 84%,
-			hsl(306 57% 41%) 93%,
-			hsl(291 65% 38%) 100%
+			hsl(44deg 82% 54%) 0%,
+			hsl(44deg 83% 54%) 11%,
+			hsl(45deg 83% 53%) 22%,
+			hsl(45deg 84% 53%) 33%,
+			hsl(46deg 84% 53%) 44%,
+			hsl(46deg 85% 53%) 56%,
+			hsl(47deg 85% 53%) 67%,
+			hsl(47deg 86% 53%) 78%,
+			hsl(48deg 86% 52%) 89%,
+			hsl(48deg 87% 52%) 100%
 		);
 }
 
@@ -4444,24 +4692,16 @@ cm-s-obsidian .HyperMD-codeblock,
 	background-image:
 		linear-gradient(
 			135deg,
-			hsl(80 30% 62%) 0%,
-			hsl(76 30% 63%) 15%,
-			hsl(73 31% 65%) 21%,
-			hsl(70 31% 66%) 27%,
-			hsl(66 31% 67%) 31%,
-			hsl(63 31% 68%) 36%,
-			hsl(60 31% 69%) 40%,
-			hsl(57 33% 71%) 44%,
-			hsl(54 36% 73%) 48%,
-			hsl(51 38% 75%) 52%,
-			hsl(49 41% 76%) 56%,
-			hsl(47 44% 78%) 60%,
-			hsl(45 46% 80%) 64%,
-			hsl(43 50% 82%) 68%,
-			hsl(41 53% 83%) 73%,
-			hsl(39 57% 85%) 79%,
-			hsl(38 62% 87%) 85%,
-			hsl(36 67% 88%) 100%
+			hsl(99deg 75% 75%) 0%,
+			hsl(103deg 75% 77%) 21%,
+			hsl(108deg 75% 79%) 30%,
+			hsl(113deg 76% 81%) 39%,
+			hsl(119deg 76% 83%) 46%,
+			hsl(124deg 77% 84%) 54%,
+			hsl(129deg 79% 85%) 61%,
+			hsl(133deg 80% 86%) 69%,
+			hsl(137deg 81% 86%) 79%,
+			hsl(141deg 81% 87%) 100%
 		);
 }
 
@@ -4469,24 +4709,16 @@ cm-s-obsidian .HyperMD-codeblock,
 	background-image:
 		linear-gradient(
 			135deg,
-			hsl(182 66% 10%) 0%,
-			hsl(178 80% 11%) 6%,
-			hsl(175 89% 12%) 12%,
-			hsl(171 88% 14%) 18%,
-			hsl(165 77% 17%) 24%,
-			hsl(158 61% 21%) 29%,
-			hsl(149 49% 25%) 35%,
-			hsl(137 39% 29%) 41%,
-			hsl(121 30% 34%) 47%,
-			hsl(103 35% 35%) 53%,
-			hsl(90 40% 36%) 59%,
-			hsl(79 45% 36%) 65%,
-			hsl(69 49% 37%) 71%,
-			hsl(60 53% 38%) 76%,
-			hsl(53 58% 42%) 82%,
-			hsl(47 61% 46%) 88%,
-			hsl(41 66% 51%) 94%,
-			hsl(36 82% 57%) 100%
+			hsl(98deg 32% 45%) 0%,
+			hsl(101deg 31% 44%) 11%,
+			hsl(104deg 30% 43%) 22%,
+			hsl(108deg 29% 41%) 33%,
+			hsl(112deg 28% 40%) 44%,
+			hsl(116deg 27% 39%) 56%,
+			hsl(120deg 26% 37%) 67%,
+			hsl(124deg 27% 35%) 78%,
+			hsl(128deg 28% 33%) 89%,
+			hsl(132deg 29% 31%) 100%
 		);
 }
 
@@ -4494,24 +4726,16 @@ cm-s-obsidian .HyperMD-codeblock,
 	background-image:
 		linear-gradient(
 			135deg,
-			hsl(181 83% 75%) 0%,
-			hsl(177 80% 74%) 6%,
-			hsl(173 79% 74%) 12%,
-			hsl(168 78% 75%) 18%,
-			hsl(163 76% 75%) 24%,
-			hsl(157 73% 76%) 29%,
-			hsl(150 70% 77%) 35%,
-			hsl(140 66% 78%) 41%,
-			hsl(129 61% 79%) 47%,
-			hsl(114 58% 79%) 53%,
-			hsl(101 58% 77%) 59%,
-			hsl(89 57% 75%) 65%,
-			hsl(79 56% 73%) 71%,
-			hsl(70 55% 71%) 76%,
-			hsl(61 53% 70%) 82%,
-			hsl(53 61% 70%) 88%,
-			hsl(47 71% 71%) 94%,
-			hsl(42 81% 73%) 100%
+			hsl(187deg 100% 89%) 0%,
+			hsl(187deg 100% 87%) 21%,
+			hsl(187deg 100% 85%) 30%,
+			hsl(187deg 100% 83%) 39%,
+			hsl(187deg 100% 81%) 46%,
+			hsl(187deg 100% 79%) 54%,
+			hsl(187deg 100% 77%) 61%,
+			hsl(186deg 100% 75%) 69%,
+			hsl(186deg 100% 72%) 79%,
+			hsl(186deg 100% 69%) 100%
 		);
 }
 
@@ -4519,17 +4743,16 @@ cm-s-obsidian .HyperMD-codeblock,
 	background-image:
 		linear-gradient(
 			135deg,
-			hsl(226 66% 47%) 0%,
-			hsl(218 76% 46%) 6%,
-			hsl(213 78% 47%) 14%,
-			hsl(211 70% 50%) 23%,
-			hsl(209 69% 55%) 33%,
-			hsl(208 67% 59%) 46%,
-			hsl(214 68% 61%) 59%,
-			hsl(222 65% 63%) 72%,
-			hsl(235 58% 65%) 84%,
-			hsl(253 53% 62%) 93%,
-			hsl(271 49% 57%) 100%
+			hsl(218deg 82% 54%) 0%,
+			hsl(218deg 83% 53%) 11%,
+			hsl(218deg 85% 52%) 22%,
+			hsl(219deg 85% 51%) 33%,
+			hsl(219deg 86% 51%) 44%,
+			hsl(220deg 87% 50%) 56%,
+			hsl(221deg 87% 50%) 67%,
+			hsl(223deg 87% 51%) 78%,
+			hsl(224deg 87% 51%) 89%,
+			hsl(227deg 87% 52%) 100%
 		);
 }
 
@@ -4537,24 +4760,16 @@ cm-s-obsidian .HyperMD-codeblock,
 	background-image:
 		linear-gradient(
 			135deg,
-			hsl(224 81% 81%) 0%,
-			hsl(226 85% 82%) 6%,
-			hsl(228 89% 82%) 12%,
-			hsl(231 93% 82%) 18%,
-			hsl(233 97% 83%) 24%,
-			hsl(236 100% 83%) 29%,
-			hsl(240 100% 83%) 35%,
-			hsl(244 100% 83%) 41%,
-			hsl(247 100% 82%) 47%,
-			hsl(251 100% 81%) 53%,
-			hsl(255 100% 81%) 59%,
-			hsl(259 100% 80%) 65%,
-			hsl(263 100% 79%) 71%,
-			hsl(267 100% 78%) 76%,
-			hsl(271 99% 77%) 82%,
-			hsl(275 96% 76%) 88%,
-			hsl(279 93% 74%) 94%,
-			hsl(283 90% 73%) 100%
+			hsl(298deg 68% 90%) 0%,
+			hsl(287deg 68% 89%) 21%,
+			hsl(277deg 68% 89%) 30%,
+			hsl(267deg 67% 88%) 39%,
+			hsl(258deg 65% 87%) 46%,
+			hsl(249deg 63% 87%) 54%,
+			hsl(240deg 61% 86%) 61%,
+			hsl(232deg 62% 83%) 69%,
+			hsl(225deg 62% 81%) 79%,
+			hsl(220deg 61% 79%) 100%
 		);
 }
 
@@ -4562,25 +4777,16 @@ cm-s-obsidian .HyperMD-codeblock,
 	background-image:
 		linear-gradient(
 			135deg,
-			hsl(314 71% 19%) 0%,
-			hsl(294 55% 24%) 14%,
-			hsl(281 52% 29%) 21%,
-			hsl(274 50% 34%) 26%,
-			hsl(268 50% 38%) 30%,
-			hsl(264 49% 41%) 35%,
-			hsl(261 49% 45%) 39%,
-			hsl(259 48% 48%) 43%,
-			hsl(257 50% 51%) 46%,
-			hsl(255 55% 54%) 50%,
-			hsl(262 51% 55%) 54%,
-			hsl(269 47% 56%) 57%,
-			hsl(277 43% 57%) 61%,
-			hsl(286 39% 58%) 65%,
-			hsl(297 35% 59%) 69%,
-			hsl(310 40% 62%) 74%,
-			hsl(320 47% 66%) 79%,
-			hsl(328 55% 69%) 86%,
-			hsl(336 64% 73%) 100%
+			hsl(308deg 33% 41%) 0%,
+			hsl(308deg 35% 41%) 11%,
+			hsl(308deg 37% 40%) 22%,
+			hsl(308deg 40% 39%) 33%,
+			hsl(308deg 42% 39%) 44%,
+			hsl(308deg 45% 38%) 56%,
+			hsl(308deg 47% 37%) 67%,
+			hsl(308deg 51% 36%) 78%,
+			hsl(308deg 54% 35%) 89%,
+			hsl(308deg 58% 35%) 100%
 		);
 }
 
