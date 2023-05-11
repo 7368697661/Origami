@@ -8,8 +8,7 @@ check it out if you want the latest edits!
 ***
 
 A theme made with 💖 for [Obsidian](https://obsidian.md/) that prioritizes text & design and puts the focus squarely on your words.
-
-![image (12)](https://user-images.githubusercontent.com/87339163/219824396-6c82e82c-ca5d-4ef7-81cb-d975e875cbe8.png)
+![Screenshot 2023-05-11 122222](https://github.com/7368697661/Origami/assets/87339163/2e6bbe46-6880-4f8d-af5f-9d93d6b1d812)
 
 Origami is a carefully crafted Obsidian theme that builds upon the stunning 1.0 redesign, featuring many changes to the base UI to create a clean and unobtrusive interface. Drawing inspiration from centuries of human typography and the timelessness of ink and folded paper, Origami offers a unique blend of modernity and tradition that will keep you working in Obsidian for hours on end. With its obsessively designed interface, Origami is the perfect workhorse theme for those who value the power of text.
 
@@ -31,8 +30,8 @@ Origami comes with several pre-defined color schemes, as well as the ability to 
 
 Note: The "WIP" label indicates that the color scheme is a work in progress and may not work/be subject to change in future releases.
 
-![New Project (6)](https://user-images.githubusercontent.com/87339163/219827939-1354c573-8911-4396-bcce-5b3d2230bba6.png)
-_A dark mode designed to help you stay organized & focued on what matters: writing_
+![screens](https://github.com/7368697661/Origami/assets/87339163/7542c057-fd4c-4903-9a8c-7cc8829cfde0)
+_With special dark-mode-only designs to help you stay organized & focued on what matters: writing_
 
 ## 📝 Typography
 Origami features a carefully selected set of typefaces for titles, body text, UI elements, and monospaced text. The weights, sizes, variable font variation settings, and other type variables have been tuned for maximum readability, and custom typefaces have been added to complement the default set.
@@ -45,7 +44,17 @@ The default title typeface is [Fraunces](https://github.com/undercasetype/Fraunc
 - Custom folder collapse styling, based off of the works of `@anubis` and 
 - Colorful headings with Style Settings.
 - Handpicked accent colors, also with Style Settings.
+
+
 - Canvas support, including UI and color options.
+![Screenshot 2023-05-11 130256](https://github.com/7368697661/Origami/assets/87339163/16fb6b2b-4f2e-4db7-924e-8d784093d004)
+
+- Callouts, with complex hover glow
+![Screenshot 2023-05-11 122812](https://github.com/7368697661/Origami/assets/87339163/46b33fef-7be9-45d9-908b-ff707cabb7a0)
+
+- Special list checkboxes
+![Screenshot 2023-05-11 125736](https://github.com/7368697661/Origami/assets/87339163/6df98446-c4ad-456b-8aa0-d042c8c7f2ca)
+
 - Special buttons!
 - Settings, prompts, tooltips, tags, links, and much more have been themed to create a unified experience.
 - `<cite> </cite>` support, courtesy of [Palatinate](https://github.com/eleanorkonik/-palatinate)
@@ -75,6 +84,8 @@ The default title typeface is [Fraunces](https://github.com/undercasetype/Fraunc
 - 😈 Myself, for writing all of this
 - 🎡 John Wheeler, for having a really cool name
 - 💖 You, for reading this & trying my theme
+
+![Screenshot 2023-05-11 125106](https://github.com/7368697661/Origami/assets/87339163/475802cb-2fb5-485c-9bdc-77d72c183f55)
 
 ## 🏗️ Todo
 - [ ] Polish aspects of the theme
