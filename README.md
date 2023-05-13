@@ -53,7 +53,7 @@ The default title typeface is [Fraunces](https://github.com/undercasetype/Fraunc
 ![Screenshot 2023-05-11 122812](https://github.com/7368697661/Origami/assets/87339163/46b33fef-7be9-45d9-908b-ff707cabb7a0)
 
 - Special list checkboxes
-![Screenshot 2023-05-11 125736](https://github.com/7368697661/Origami/assets/87339163/6df98446-c4ad-456b-8aa0-d042c8c7f2ca)
+![image](https://github.com/7368697661/Origami/assets/87339163/0b5dfcf2-636b-4739-92b3-816bb09eca1e)
 
 - Special buttons!
 - Settings, prompts, tooltips, tags, links, and much more have been themed to create a unified experience.
