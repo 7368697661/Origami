@@ -8,7 +8,8 @@ check it out if you want the latest edits!
 ***
 
 A theme made with 💖 for [Obsidian](https://obsidian.md/) that prioritizes text & design and puts the focus squarely on your words.
-![Screenshot 2023-05-11 122222](https://github.com/7368697661/Origami/assets/87339163/2e6bbe46-6880-4f8d-af5f-9d93d6b1d812)
+![screen1](https://github.com/7368697661/Origami/assets/87339163/969abbba-e851-4765-88c1-115b3bf51697)
+
 
 Origami is a carefully crafted Obsidian theme that builds upon the stunning 1.0 redesign, featuring many changes to the base UI to create a clean and unobtrusive interface. Drawing inspiration from centuries of human typography and the timelessness of ink and folded paper, Origami offers a unique blend of modernity and tradition that will keep you working in Obsidian for hours on end. With its obsessively designed interface, Origami is the perfect workhorse theme for those who value the power of text.
 
