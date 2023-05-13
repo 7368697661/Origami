@@ -5429,7 +5429,6 @@ body {
   }
 
 .fancy-callouts .callout {
-    color: white;
     border-radius: 8px;
     transition: 700ms;
 }
@@ -5442,20 +5441,26 @@ body {
     color: white;
 }
 
-.fancy-callouts .callout[data-callout="info"] {
+.fancy-callouts .callout[data-callout="info"],
+.fancy-callouts .callout[data-callout="todo"] {
   border: 1px solid rgb(255, 204, 112);
     background: linear-gradient(43deg, rgb(65, 88, 208) 0%, rgb(200, 80, 192) 46%, rgb(255, 204, 112) 100%);
   }
   
-.fancy-callouts .callout[data-callout="abstract"] {
+.fancy-callouts .callout[data-callout="abstract"],
+.fancy-callouts .callout[data-callout="summary"],
+.fancy-callouts .callout[data-callout="tldr"]
+ {
   border: 1px solid #07f49e;
     background: linear-gradient(43deg, #42047e 0%, #07f49e 100%);
   }
   
-.fancy-callouts .callout[data-callout="warning"] {
+.fancy-callouts .callout[data-callout="warning"],
+.fancy-callouts .callout[data-callout="caution"],
+.fancy-callouts .callout[data-callout="danger"] {
   border: 1px solid #ef745c;
     background: linear-gradient(43deg, #34073d 0%, #ef745c 100%);
-  }
+}
   
 .fancy-callouts .callout[data-callout="example"] {
   border: 1px solid #ccb3d1;
@@ -5467,22 +5472,29 @@ body {
     background: linear-gradient(43deg, #08203e 0%, #557c93 100%);
   }
   
-.fancy-callouts .callout[data-callout="tip"] {
+.fancy-callouts .callout[data-callout="tip"],
+.fancy-callouts .callout[data-callout="hint"],
+.fancy-callouts .callout[data-callout="important"] {
   border: 1px solid #a4c6b8;
     background: linear-gradient(43deg, #5e435d 0%, #a4c6b8 100%);
   }
   
-.fancy-callouts .callout[data-callout="question"] {
+.fancy-callouts .callout[data-callout="question"],
+.fancy-callouts .callout[data-callout="help"],
+.fancy-callouts .callout[data-callout="faq"] {
   border: 1px solid #5d5d3c;
     background: linear-gradient(43deg, #3f3f42 0%, #5d5d3c 100%);
   }
   
-.fancy-callouts .callout[data-callout="danger"] {
+.fancy-callouts .callout[data-callout="danger"],
+.fancy-callouts .callout[data-callout="error"] {
   border: 1px solid #751006;
     background: linear-gradient(43deg, #1f0021 0%, #751006 100%);
   }
   
-.fancy-callouts .callout[data-callout="failure"] {
+.fancy-callouts .callout[data-callout="failure"],
+.fancy-callouts .callout[data-callout="fail"],
+.fancy-callouts .callout[data-callout="missing"] {
   border: 1px solid #f4985a;
     background: linear-gradient(43deg, #12243f 0%, #f4985a 100%);
   }
@@ -5492,31 +5504,39 @@ body {
     background: linear-gradient(43deg, #f74c06 0%, #f9bc2c 100%);
   }
   
-.fancy-callouts .callout[data-callout="quote"] {
+.fancy-callouts .callout[data-callout="quote"],
+.fancy-callouts .callout[data-callout="cite"] {
   border: 1px solid #858e96;
     background: linear-gradient(43deg, #60696b 0%, #858e96 100%);
   }
   
-.fancy-callouts .callout[data-callout="success"] {
+.fancy-callouts .callout[data-callout="success"],
+.fancy-callouts .callout[data-callout="check"],
+.fancy-callouts .callout[data-callout="done"] {
   border: 1px solid #99f2d1;
     background: linear-gradient(43deg, #1c3e35 0%, #99f2d1 100%);
   }
   
-.fancy-callouts .callout[data-callout="abstract"]:hover {
+.fancy-callouts .callout[data-callout="abstract"]:hover,
+.fancy-callouts .callout[data-callout="summary"]:hover,
+.fancy-callouts .callout[data-callout="tldr"]:hover {
     box-shadow:
     -24px 24px 69px -3px rgba(66, 4, 126, 0.4),
     24px -24px 69px -3px rgba(7, 244, 158, 0.1);
   
   }
   
-.fancy-callouts .callout[data-callout="warning"]:hover {
+.fancy-callouts .callout[data-callout="warning"]:hover,
+.fancy-callouts .callout[data-callout="caution"]:hover,
+.fancy-callouts .callout[data-callout="danger"]:hover {
     box-shadow:
     -24px 24px 69px -3px rgba(52, 7, 61, 0.3),
     24px -24px 69px -3px rgba(239, 116, 92, 0.3);
   
   }
   
-.fancy-callouts .callout[data-callout="info"]:hover {
+.fancy-callouts .callout[data-callout="info"]:hover,
+.fancy-callouts .callout[data-callout="todo"]:hover {
     box-shadow: 
     -24px 24px 69px -3px rgba(84,86,206,0.3), 
     0px 1px 69px -3px rgba(201,88,187,0.3), 
@@ -5538,35 +5558,44 @@ body {
   
   }
   
-.fancy-callouts .callout[data-callout="tip"]:hover {
+.fancy-callouts .callout[data-callout="tip"]:hover,
+.fancy-callouts .callout[data-callout="hint"]:hover,
+.fancy-callouts .callout[data-callout="important"]:hover {
     box-shadow: 
     -24px 24px 69px -3px rgba(94, 67, 93, 0.3),
     24px -24px 69px -3px rgba(164, 198, 184, 0.3);
   
   }
   
-.fancy-callouts .callout[data-callout="success"]:hover {
+.fancy-callouts .callout[data-callout="success"]:hover,
+.fancy-callouts .callout[data-callout="check"]:hover,
+.fancy-callouts .callout[data-callout="done"]:hover {
     box-shadow: 
     -24px 24px 69px -3px rgba(28, 62, 53, 0.3),
     24px -24px 69px -3px rgba(153, 242, 209, 0.3);
   
   }
   
-.fancy-callouts .callout[data-callout="question"]:hover {
+.fancy-callouts .callout[data-callout="question"]:hover,
+.fancy-callouts .callout[data-callout="help"]:hover,
+.fancy-callouts .callout[data-callout="faq"]:hover {
     box-shadow: 
     -24px 24px 69px -3px rgba(63, 63, 66, 0.3),
     24px -24px 69px -3px rgba(93, 93, 60, 0.3);
   
   }
   
-.fancy-callouts .callout[data-callout="failure"]:hover {
+.fancy-callouts .callout[data-callout="failure"]:hover,
+.fancy-callouts .callout[data-callout="fail"]:hover,
+.fancy-callouts .callout[data-callout="missing"]:hover {
     box-shadow: 
     -24px 24px 69px -3px rgba(18, 36, 63, 0.3),
     24px -24px 69px -3px rgba(244, 152, 90, 0.3);
   
   }
   
-.fancy-callouts .callout[data-callout="danger"]:hover {
+.fancy-callouts .callout[data-callout="danger"]:hover,
+.fancy-callouts .callout[data-callout="error"]:hover {
     box-shadow: 
     -24px 24px 69px -3px rgba(31, 0, 33, 0.3),
     24px -24px 69px -3px rgba(117, 16, 6, 0.3);
@@ -5579,7 +5608,8 @@ body {
     24px -24px 69px -3px rgba(247, 76, 6, 0.3);
   }
   
-.fancy-callouts .callout[data-callout="quote"]:hover {
+.fancy-callouts .callout[data-callout="quote"]:hover,
+.fancy-callouts .callout[data-callout="cite"]:hover {
     box-shadow: 
     -24px 24px 69px -3px rgba(96, 105, 107, 0.3),
     24px -24px 69px -3px rgba(133, 142, 150, 0.3);
@@ -5599,4 +5629,19 @@ body {
 .fancy-callouts .callout[data-callout="bug"]:hover,
 .fancy-callouts .callout[data-callout="quote"]:hover {
   border: 1px solid white;
+}
+
+.fancy-callouts .callout[data-callout="abstract"],
+.fancy-callouts .callout[data-callout="warning"],
+.fancy-callouts .callout[data-callout="info"],
+.fancy-callouts .callout[data-callout="example"],
+.fancy-callouts .callout[data-callout="note"],
+.fancy-callouts .callout[data-callout="tip"],
+.fancy-callouts .callout[data-callout="success"],
+.fancy-callouts .callout[data-callout="question"],
+.fancy-callouts .callout[data-callout="failure"],
+.fancy-callouts .callout[data-callout="danger"],
+.fancy-callouts .callout[data-callout="bug"],
+.fancy-callouts .callout[data-callout="quote"] {
+  color: white;
 }
