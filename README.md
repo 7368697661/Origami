@@ -5,7 +5,7 @@
 	<br><BR>
 		🕆 changed HR from pentagram to something nicer <BR>
 		🕆 rainbow folders <BR>
-		🕆 other minor changes 
+		🕆 other minor changes
 <BR><BR><br></p>
 <HR><HR><HR>
 
