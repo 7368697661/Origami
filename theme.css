@@ -106,14 +106,14 @@ settings:
             label: umbra
             value: o-purple-d
         -
+            label: minimum
+            value: o-min-d
+        -
             label: soft
             value: o-soft-d
         -
             label: shark Time
             value: o-shark-d
-        -
-            label: minimum
-            value: o-min-d
         -
             label: solarized
             value: o-solar-dt
@@ -1769,16 +1769,17 @@ body {
 	--color-pink: #FA99CD;
     --canvas-color: 245, 245, 245;
     --color-base-00: #0c0c0c;
-    --color-base-10: #242424;
+    --color-base-05: #0f0f0f;
+    --color-base-10: #161616;
     --color-base-20: #000000;
-    --color-base-25: #2a2a2a;
+    --color-base-25: #222222;
     --color-base-30: #000000;
     --color-base-35: #3F3F3F;
     --color-base-40: #000000;
     --color-base-50: #666;
     --color-base-60: #999;
     --color-base-70: #bababa;
-    --color-base-100: #dadada;
+    --color-base-100: #ffffff;
 }
 
 /* paperlike
@@ -1858,8 +1859,8 @@ body {
 	--color-pink-hsl: 7, 81%, 68%;
 	--canvas-color: 245, 245, 245;
 	--color-base-00: #423434; /* background-primary */
-    --color-base-05: #4d3c3c;
-	--color-base-10: #242424; /* background-primary-alt */
+    --color-base-05: #3f3232;
+	--color-base-10: #382b2b; /* background-primary-alt */
 	--color-base-20: #574646; /* background-secondary */
 	--color-base-25: #635151; /* idk lol */
 	--color-base-30: #302424; /* background-modifier-border */
@@ -1994,12 +1995,13 @@ body {
 }
 
 
-.o-shark-d.mod-left-split .workspace-tabs .workspace-leaf {
+.o-shark-d .mod-left-split .workspace-tabs .workspace-leaf {
     background: #1c2431 !important;
 }
 
-.o-shark-d.workspace-tabs.mod-top-left-space .workspace-tab-header-container {
-    background: #1c2431 !important;
+.o-shark-d .workspace-tabs.mod-top-left-space .workspace-tab-header-container,
+.o-shark-d .workspace-tabs.mod-top-right-space .workspace-tab-header-container {
+    background: #1c2431;
 }
 
 .o-shark-d.workspace .mod-root .workspace-tab-header:not(.is-active) {
@@ -2008,8 +2010,8 @@ body {
 }
 
 
-.o-shark-d.mod-right-split .workspace-tabs .workspace-leaf {
-    background: var(--background-primary-alt) !important;
+.o-shark-d .mod-right-split .workspace-tabs .workspace-leaf {
+    background: #1c2431 !important;
 }
 
 /* solarized
@@ -2086,12 +2088,13 @@ body {
 	--color-pink-hsl: 331, 64.1%, 52%;
 	--color-pink-rgb: 211, 54, 130;
 	--color-base-00: #073642;
+    --color-base-05: #0a4655;
 	--color-base-10: #08404E;
 	--color-base-20: #002B36;
-	--color-base-25: #023845;
-	--color-base-30: #586E75;
-	--color-base-35: #637C84;
-	--color-base-40: #002B36;
+	--color-base-25: #054453;
+	--color-base-30: #355964;
+	--color-base-35: #4b6168;
+	--color-base-40: #094352;
 	--color-base-50: #586E75;
 	--color-base-60: #93A1A1;
 	--color-base-70: #839496;
@@ -2169,10 +2172,11 @@ body {
 	--color-pink: #EB6FAF;
 	--color-pink-hsl: 329, 75.6%, 67.8%;
 	--color-base-00: #282828;
+    --color-base-05: #232627;
 	--color-base-10: #1D2021;
 	--color-base-20: #32302F;
 	--color-base-25: #3C3836;
-	--color-base-30: #504945;
+	--color-base-30: #423c39;
 	--color-base-35: #665C54;
 	--color-base-40: #7C6F64;
 	--color-base-50: #BDAE93;
@@ -2182,6 +2186,90 @@ body {
 }
 
 /* dark themes */
+
+.theme-dark.o-dracula-dt {
+	--accent-h: 1;
+	--accent-s: 71.2%;
+	--accent-l: 52.4%;
+	--color-red: #F55;
+	--color-red-hsl: 0, 100%, 66.7%;
+	--color-red-rgb: 255, 85, 85;
+	--color-green: #50FA7B;
+	--color-green-hsl: 135.2, 94.4%, 64.7%;
+	--color-green-rgb: 80, 250, 123;
+	--color-orange: #FFB86C;
+	--color-orange-hsl: 31, 100%, 71.2%;
+	--color-orange-rgb: 255, 184, 108;
+	--color-yellow: #F1FA8C;
+	--color-yellow-hsl: 64.9, 91.7%, 76.5%;
+	--color-yellow-rgb: 241, 250, 140;
+	--color-cyan: #8BE9FD;
+	--color-cyan-hsl: 190.5, 96.6%, 76.9%;
+	--color-cyan-rgb: 139, 233, 253;
+	--color-blue: #8BC6FD;
+	--color-blue-hsl: 208.9, 96.6%, 76.9%;
+	--color-blue-rgb: 139, 198, 253;
+	--color-purple: #BD93F9;
+	--color-purple-hsl: 264.7, 89.5%, 77.6%;
+	--color-purple-rgb: 189, 147, 249;
+	--color-pink: #FF79C6;
+	--color-pink-hsl: 325.5, 100%, 73.7%;
+	--color-pink-rgb: 255, 121, 198;
+    --color-base-00: #282A36;
+    --color-base-05: #363845;
+    --color-base-10: #3c3e4e;
+	--color-base-20: #394250;
+	--color-base-25: #465163;
+	--color-base-30: #44475A;
+	--color-base-35: #4F5269;
+	--color-base-40: #282A36;
+	--color-base-50: #6272A4;
+	--color-base-60: #6272A4;
+	--color-base-70: #F8F8F2;
+	--color-base-100: #FEFEFA;
+}
+
+.theme-dark.o-lyt-dt {
+	--accent-h: 191 !important;
+	--accent-s: 54% !important;
+	--accent-l: 64% !important;
+	--color-red: #E63946;
+	--color-red-hsl: 355.5, 77.6%, 56.3%;
+	--color-red-rgb: 230, 57, 70;
+	--color-green: #60993E;
+	--color-green-hsl: 97.6, 42.3%, 42.2%;
+	--color-green-rgb: 96, 153, 62;
+	--color-orange: #FFCDB2;
+	--color-orange-hsl: 21, 100%, 84.9%;
+	--color-orange-rgb: 255, 205, 178;
+	--color-yellow: #F2CC8F;
+	--color-yellow-hsl: 37, 79.2%, 75.5%;
+	--color-yellow-rgb: 242, 204, 143;
+	--color-cyan: #72A1E5;
+	--color-cyan-hsl: 215.5, 68.9%, 67.3%;
+	--color-cyan-rgb: 114, 161, 229;
+	--color-blue: #52B2CF;
+	--color-blue-hsl: 193.9, 56.6%, 56.7%;
+	--color-blue-rgb: 82, 178, 207;
+	--color-purple: #9097C0;
+	--color-purple-hsl: 231.3, 27.6%, 65.9%;
+	--color-purple-rgb: 144, 151, 192;
+	--color-pink: #EFD4BF;
+	--color-pink-hsl: 26.3, 60%, 84.3%;
+    --color-base-00: #23242A;
+    --color-base-05: #202124;
+    --color-base-10: #1E1F24;
+	--color-base-20: #2D3039;
+	--color-base-25: #343A4B;
+	--color-base-30: #434552;
+	--color-base-35: #7C849C;
+	--color-base-40: #343A4B;
+	--color-base-50: #B9C3DF;
+	--color-base-60: #DBE2F5;
+	--color-base-70: #72C3D5;
+	--color-base-100: #E8ECF5;
+}
+
 
 /* abaddon
 */
@@ -2215,99 +2303,19 @@ body {
 	--color-pink: #E5989B;
 	--color-pink-hsl: 358, 60%, 75%;
 	--canvas-color: 114, 114, 114;
-	--color-base-00: #1F1F1F; /* background-primary */
-	--color-base-10: #1F1F1F; /* background-primary-alt */
-	--color-base-20: #1A1A1A; /* background-secondary */
-	--color-base-25: #1F1F1F; /* idk lol */
-	--color-base-30: #3C3C3C; /* background-modifier-border */
-	--color-base-35: #383838; /* background-modifier-border-hover */
-	--color-base-40: #3C3C3C; /* background-modifier-border-focus */
-	--color-base-50: #7F7B66; /* text-faint */
-	--color-base-60: #5F5F5F; /* also no clue */
-	--color-base-70: #BCAC8F; /* text-muted */
-	--color-base-100: #C6C6C6; /* text-normal */
-	--text-on-accent: var(--color-base-00);
-}
-
-.theme-dark.o-dracula-dt {
-	--accent-h: 1;
-	--accent-s: 71.2%;
-	--accent-l: 52.4%;
-	--color-red: #F55;
-	--color-red-hsl: 0, 100%, 66.7%;
-	--color-red-rgb: 255, 85, 85;
-	--color-green: #50FA7B;
-	--color-green-hsl: 135.2, 94.4%, 64.7%;
-	--color-green-rgb: 80, 250, 123;
-	--color-orange: #FFB86C;
-	--color-orange-hsl: 31, 100%, 71.2%;
-	--color-orange-rgb: 255, 184, 108;
-	--color-yellow: #F1FA8C;
-	--color-yellow-hsl: 64.9, 91.7%, 76.5%;
-	--color-yellow-rgb: 241, 250, 140;
-	--color-cyan: #8BE9FD;
-	--color-cyan-hsl: 190.5, 96.6%, 76.9%;
-	--color-cyan-rgb: 139, 233, 253;
-	--color-blue: #8BC6FD;
-	--color-blue-hsl: 208.9, 96.6%, 76.9%;
-	--color-blue-rgb: 139, 198, 253;
-	--color-purple: #BD93F9;
-	--color-purple-hsl: 264.7, 89.5%, 77.6%;
-	--color-purple-rgb: 189, 147, 249;
-	--color-pink: #FF79C6;
-	--color-pink-hsl: 325.5, 100%, 73.7%;
-	--color-pink-rgb: 255, 121, 198;
-	--color-base-00: #282A36;
-	--color-base-10: #44475A;
-	--color-base-20: #1A1E24;
-	--color-base-25: #282A36;
-	--color-base-30: #44475A;
-	--color-base-35: #4F5269;
-	--color-base-40: #282A36;
-	--color-base-50: #6272A4;
-	--color-base-60: #6272A4;
-	--color-base-70: #F8F8F2;
-	--color-base-100: #FEFEFA;
-}
-
-.theme-dark.ul-lyt-dt {
-	--accent-h: 191 !important;
-	--accent-s: 54% !important;
-	--accent-l: 64% !important;
-	--color-red: #E63946;
-	--color-red-hsl: 355.5, 77.6%, 56.3%;
-	--color-red-rgb: 230, 57, 70;
-	--color-green: #60993E;
-	--color-green-hsl: 97.6, 42.3%, 42.2%;
-	--color-green-rgb: 96, 153, 62;
-	--color-orange: #FFCDB2;
-	--color-orange-hsl: 21, 100%, 84.9%;
-	--color-orange-rgb: 255, 205, 178;
-	--color-yellow: #F2CC8F;
-	--color-yellow-hsl: 37, 79.2%, 75.5%;
-	--color-yellow-rgb: 242, 204, 143;
-	--color-cyan: #72A1E5;
-	--color-cyan-hsl: 215.5, 68.9%, 67.3%;
-	--color-cyan-rgb: 114, 161, 229;
-	--color-blue: #52B2CF;
-	--color-blue-hsl: 193.9, 56.6%, 56.7%;
-	--color-blue-rgb: 82, 178, 207;
-	--color-purple: #9097C0;
-	--color-purple-hsl: 231.3, 27.6%, 65.9%;
-	--color-purple-rgb: 144, 151, 192;
-	--color-pink: #EFD4BF;
-	--color-pink-hsl: 26.3, 60%, 84.3%;
-	--color-base-00: #23242A;
-	--color-base-10: #1E1F24;
-	--color-base-20: #2D3039;
-	--color-base-25: #343A4B;
-	--color-base-30: #6C7184;
-	--color-base-35: #7C849C;
-	--color-base-40: #A0A7BB;
-	--color-base-50: #B9C3DF;
-	--color-base-60: #DBE2F5;
-	--color-base-70: #72C3D5;
-	--color-base-100: #E8ECF5;
+    --color-base-00: #1F1F1F;
+    --color-base-05: #1F1F1F;
+    --color-base-10: #1F1F1F;
+    --color-base-20: #2b2b2b;
+    --color-base-25: #353535;
+    --color-base-30: #303030;
+    --color-base-35: #383838;
+    --color-base-40: #292929;
+    --color-base-50: #7F7B66;
+    --color-base-60: #5F5F5F;
+    --color-base-70: #BCAC8F;
+    --color-base-100: #C6C6C6;
+    --text-on-accent: var(--color-base-00);
 }
 
   /* ========================================================================== */
