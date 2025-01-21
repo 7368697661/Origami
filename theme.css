@@ -269,35 +269,11 @@ settings:
     default: ''
     options:
         -
-            label: Border
+            label: border
             value: o-kanban-border
         -
-            label: Notion-inspired
+            label: notion-inspired
             value: o-kanban-notion
-
-  -
-    id: o-kanban-notion-border-width
-    title: kanban, notion left border width
-    type: variable-number-slider
-    format: px
-    default: 3
-    min: 0
-    max: 4
-    step: 1
-
-  -
-    id: o-kanban-notion-border-color
-    title: kanban, notion left border dolor
-    type: variable-select
-    allowEmpty: false
-    default: 'Monochrome'
-    options:
-        -
-            label: Monochrome
-            value: var(--background-modifier-border)
-        -
-            label: Accent
-            value: var(--color-accent)
 
 
 */
@@ -4878,7 +4854,7 @@ input[type="checkbox"] {
 */
 .o-kanban-border .kanban-plugin__item {
 	font-size: 0.875rem;
-	border: var(--o-border, var(--bb-border-dashed));
+	border: var(--bb-border);
 	border-radius: 4px;
 }
 
@@ -4886,12 +4862,12 @@ input[type="checkbox"] {
 	font-size: 1em;
 	margin-bottom: 5px;
 	border: none;
-	border-left: var(--o-kanban-notion-border-width) solid var(--o-kanban-notion-border-color);
+	border-left: var(--bb-border-dashed);
 	border-radius: 0;
 }
 
 .o-kanban-notion .kanban-plugin__lane-header-wrapper {
-	border-bottom: 1px solid var(--background-modifier-border)
+	border-bottom: var(--bb-border);
 }
 
 .o-kanban-notion .kanban-plugin__lane {
@@ -4901,7 +4877,7 @@ input[type="checkbox"] {
 
 .o-kanban-border .kanban-plugin__lane {
 	background: var(--background-secondary);
-	border: var(--o-border, var(--bb-border-dashed));
+	border: var(--bb-border);
 	border-radius: 8px;
 }
 
@@ -4914,6 +4890,15 @@ input[type="checkbox"] {
 .o-kanban-wrap .kanban-plugin__board > div {
 	flex-wrap: wrap;
 	overflow-y: scroll;
+}
+
+.o-kanban-wrap .kanban-plugin__board>div {
+    gap: 8px;
+}
+
+.kanban-plugin__lane-form-wrapper {
+    border: var(--bb-border);
+    box-shadow: var(--shadow-l);
 }
 
 /* frontmatter card
