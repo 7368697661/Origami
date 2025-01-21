@@ -3817,28 +3817,9 @@ strong,
 	text-align-last: left;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.cm-header {
+  display: unset;
+}
 
 
 /* blockqoutes
