@@ -168,6 +168,27 @@ settings:
     collapsed: true
 
   -
+    id: o-colorful-headings
+    title: rainbow headers
+    type: class-toggle
+
+  -
+    id: o-header-size
+    title: header size arrays
+    type: class-select
+    allowEmpty: true
+    options:
+        -
+            label: opinionated
+            value: o-headings-opinionated
+        -
+            label: descending
+            value: o-headings-descending
+        -
+            label: flat
+            value: o-headings-flat
+
+  -
     id: o-header-size
     title: header size arrays
     description: options for changing your header sizes
@@ -176,13 +197,13 @@ settings:
     options:
         -
             label: opinionated
-            value: o-headings-opn
+            value: o-headings-opinionated
         -
             label: descending
-            value: o-headings-dec
+            value: o-headings-descending
         -
             label: flat
-            value: o-headings-flt
+            value: o-headings-flat
 
   -
     id: o-header-line-accent
@@ -223,10 +244,6 @@ settings:
   -
     id: o-header-line-h6
     title: header 6 underline
-    type: class-toggle
-  -
-    id: o-colorful-headings
-    title: rainbow headers
     type: class-toggle
 
   -
@@ -1082,8 +1099,8 @@ body {
     var(--accent-l);
     --color-accent: hsl(var(--accent-h), var(--accent-s), var(--accent-l));
 
-    --color-accent-1: hsl(calc(var(--accent-h) - 175), calc(var(--accent-s) * 1.05), calc(var(--accent-l) * 1.29)) !important;
-    --color-accent-1-hsl: calc(var(--accent-h) - 175), calc(var(--accent-s) * 1.05), calc(var(--accent-l) * 1.29) !important;
+    /* --color-accent-1: hsl(calc(var(--accent-h) - 175), calc(var(--accent-s) * 1.05), calc(var(--accent-l) * 1.29));
+    --color-accent-1-hsl: calc(var(--accent-h) - 175), calc(var(--accent-s) * 1.05), calc(var(--accent-l) * 1.29); */
 
     --color-accent-2: hsl(calc(var(--accent-h) - 3), calc(var(--accent-s) * 1.02), calc(var(--accent-l) * 1.15));
 
@@ -1350,29 +1367,30 @@ body {
 	--accent-h: 13;
 	--accent-s: 68%;
 	--accent-l: 63%;
-	--color-red: #EA5E41;
-	--color-red-hsl: 10.3, 80.1%, 58.6%;
-	--color-red-rgb: 234, 94, 65;
-	--color-green: #A9D37E;
-	--color-green-hsl: 89.6, 49.1%, 66.1%;
-	--color-green-rgb: 169, 211, 126;
-	--color-orange: #ED874C;
-	--color-orange-hsl: 22, 81.7%, 61.4%;
-	--color-orange-rgb: 237, 135, 76;
-	--color-yellow: #E9BA4A;
-	--color-yellow-hsl: 42.3, 78.3%, 60.2%;
-	--color-yellow-rgb: 233, 186, 74;
-	--color-cyan: #5AB7ED;
-	--color-cyan-hsl: 202, 80.3%, 64.1%;
-	--color-cyan-rgb: 90, 183, 237;
-	--color-blue: #339AF0;
-	--color-blue-hsl: 207.3, 86.3%, 57.1%;
-	--color-blue-rgb: 122, 184, 225;
-	--color-purple: #7865E6;
-	--color-purple-hsl: 248.8, 72.1%, 64.9%;
-	--color-purple-rgb: 120, 101, 230;
-	--color-pink: #F6B7D8;
-	--color-pink-hsl: 328.6, 77.8%, 84.1%;
+	--color-red-rgb: 154, 69, 60;
+	--color-red: #9a453c;
+	--color-red-hsl: 6, 44%, 42%;
+	--color-green-rgb: 97, 113, 91;
+	--color-green: #61715b;
+	--color-green-hsl: 104, 11%, 40%;
+    --color-orange-rgb: 160, 116, 75;
+    --color-orange: #a0744b;
+    --color-orange-hsl: 29, 36%, 46%;
+    --color-yellow-rgb: 154, 143, 81;
+    --color-yellow: #9a8f51;
+    --color-yellow-hsl: 51, 31%, 46%;
+    --color-cyan-rgb: 16, 77, 112;
+    --color-cyan: #104d70;
+    --color-cyan-hsl: 202, 75%, 25%;
+	--color-blue-rgb: 51, 83, 138;
+	--color-blue: #33538a;
+	--color-blue-hsl: 218, 45%, 37%;
+	--color-purple-rgb: 95, 81, 112;
+	--color-purple: #5f5170;
+	--color-purple-hsl: 267, 16%, 38%;
+	--color-pink-rgb: 141, 72, 63;
+	--color-pink: #8d483f;
+	--color-pink-hsl: 7, 38%, 40%;
 	--color-base-00: #dacdcd; /* background-primary */
 	--color-base-05: #cabbbb; /* background-secondary-alt in light mode, for some reason */
 	--color-base-10: #b39696; /* background-primary-alt */
@@ -1436,29 +1454,29 @@ body {
 	--mono-rgb-0: 255, 255, 255;
 	--mono-rgb-100: 0, 0, 0;
 	--color-red-rgb: 154, 69, 60;
-	--color-red: #9A453C;
+	--color-red: #9a453c;
 	--color-red-hsl: 6, 44%, 42%;
-	--color-green-rgb: 139, 164, 129;
-	--color-green: #8BA481;
-	--color-green-hsl: 103, 16%, 57%;
-	--color-orange-rgb: 241, 187, 138;
-	--color-orange: #F1BB8A;
-	--color-orange-hsl: 29, 79%, 74%;
-	--color-yellow-rgb: 228, 188, 127;
-	--color-yellow: #E4BC7F;
-	--color-yellow-hsl: 36, 65%, 70%;
-	--color-cyan-rgb: 155, 199, 189;
-	--color-cyan: #9BC7BD;
-	--color-cyan-hsl: 166, 28%, 69%;
-	--color-blue-rgb: 23, 92, 89;
-	--color-blue: #175C59;
-	--color-blue-hsl: 177, 60%, 23%;
-	--color-purple-rgb: 166, 154, 181;
-	--color-purple: #A69AB5;
-	--color-purple-hsl: 267, 15%, 66%;
-	--color-pink-rgb: 239, 121, 106;
-	--color-pink: #EF796A;
-	--color-pink-hsl: 7, 81%, 68%;
+	--color-green-rgb: 97, 113, 91;
+	--color-green: #61715b;
+	--color-green-hsl: 104, 11%, 40%;
+    --color-orange-rgb: 160, 116, 75;
+    --color-orange: #a0744b;
+    --color-orange-hsl: 29, 36%, 46%;
+    --color-yellow-rgb: 154, 143, 81;
+    --color-yellow: #9a8f51;
+    --color-yellow-hsl: 51, 31%, 46%;
+    --color-cyan-rgb: 16, 77, 112;
+    --color-cyan: #104d70;
+    --color-cyan-hsl: 202, 75%, 25%;
+	--color-blue-rgb: 51, 83, 138;
+	--color-blue: #33538a;
+	--color-blue-hsl: 218, 45%, 37%;
+	--color-purple-rgb: 95, 81, 112;
+	--color-purple: #5f5170;
+	--color-purple-hsl: 267, 16%, 38%;
+	--color-pink-rgb: 141, 72, 63;
+	--color-pink: #8d483f;
+	--color-pink-hsl: 7, 38%, 40%;
 	--canvas-color: 10, 10, 10;
 	--color-base-00: #dad7cd; /* background-primary */
 	--color-base-05: #bec5b3; /* background-secondary-alt in light mode, for some reason */
@@ -1527,29 +1545,29 @@ body {
 	--mono-rgb-0: 255, 255, 255;
 	--mono-rgb-100: 0, 0, 0;
 	--color-red-rgb: 154, 69, 60;
-	--color-red: #9A453C;
+	--color-red: #9a453c;
 	--color-red-hsl: 6, 44%, 42%;
-	--color-green-rgb: 139, 164, 129;
-	--color-green: #8BA481;
-	--color-green-hsl: 103, 16%, 57%;
-	--color-orange-rgb: 241, 187, 138;
-	--color-orange: #F1BB8A;
-	--color-orange-hsl: 29, 79%, 74%;
-	--color-yellow-rgb: 228, 188, 127;
-	--color-yellow: #E4BC7F;
-	--color-yellow-hsl: 36, 65%, 70%;
-	--color-cyan-rgb: 155, 199, 189;
-	--color-cyan: #9BC7BD;
-	--color-cyan-hsl: 166, 28%, 69%;
-	--color-blue-rgb: 23, 92, 89;
-	--color-blue: #175C59;
-	--color-blue-hsl: 177, 60%, 23%;
-	--color-purple-rgb: 166, 154, 181;
-	--color-purple: #A69AB5;
-	--color-purple-hsl: 267, 15%, 66%;
-	--color-pink-rgb: 239, 121, 106;
-	--color-pink: #EF796A;
-	--color-pink-hsl: 7, 81%, 68%;
+	--color-green-rgb: 97, 113, 91;
+	--color-green: #61715b;
+	--color-green-hsl: 104, 11%, 40%;
+    --color-orange-rgb: 160, 116, 75;
+    --color-orange: #a0744b;
+    --color-orange-hsl: 29, 36%, 46%;
+    --color-yellow-rgb: 154, 143, 81;
+    --color-yellow: #9a8f51;
+    --color-yellow-hsl: 51, 31%, 46%;
+    --color-cyan-rgb: 16, 77, 112;
+    --color-cyan: #104d70;
+    --color-cyan-hsl: 202, 75%, 25%;
+	--color-blue-rgb: 51, 83, 138;
+	--color-blue: #33538a;
+	--color-blue-hsl: 218, 45%, 37%;
+	--color-purple-rgb: 95, 81, 112;
+	--color-purple: #5f5170;
+	--color-purple-hsl: 267, 16%, 38%;
+	--color-pink-rgb: 141, 72, 63;
+	--color-pink: #8d483f;
+	--color-pink-hsl: 7, 38%, 40%;
 	--canvas-color: 10, 10, 10;
 	--color-base-00: #cdd5da; /* background-primary */
 	--color-base-05: #c0c8ce; /* background-secondary-alt in light mode, for some reason */
@@ -1617,29 +1635,29 @@ body {
 	--mono-rgb-0: 255, 255, 255;
 	--mono-rgb-100: 0, 0, 0;
 	--color-red-rgb: 154, 69, 60;
-	--color-red: #9A453C;
+	--color-red: #9a453c;
 	--color-red-hsl: 6, 44%, 42%;
-	--color-green-rgb: 139, 164, 129;
-	--color-green: #8BA481;
-	--color-green-hsl: 103, 16%, 57%;
-	--color-orange-rgb: 241, 187, 138;
-	--color-orange: #F1BB8A;
-	--color-orange-hsl: 29, 79%, 74%;
-	--color-yellow-rgb: 228, 188, 127;
-	--color-yellow: #E4BC7F;
-	--color-yellow-hsl: 36, 65%, 70%;
-	--color-cyan-rgb: 155, 199, 189;
-	--color-cyan: #9BC7BD;
-	--color-cyan-hsl: 166, 28%, 69%;
-	--color-blue-rgb: 23, 92, 89;
-	--color-blue: #175C59;
-	--color-blue-hsl: 177, 60%, 23%;
-	--color-purple-rgb: 166, 154, 181;
-	--color-purple: #A69AB5;
-	--color-purple-hsl: 267, 15%, 66%;
-	--color-pink-rgb: 239, 121, 106;
-	--color-pink: #EF796A;
-	--color-pink-hsl: 7, 81%, 68%;
+	--color-green-rgb: 97, 113, 91;
+	--color-green: #61715b;
+	--color-green-hsl: 104, 11%, 40%;
+    --color-orange-rgb: 160, 116, 75;
+    --color-orange: #a0744b;
+    --color-orange-hsl: 29, 36%, 46%;
+    --color-yellow-rgb: 154, 143, 81;
+    --color-yellow: #9a8f51;
+    --color-yellow-hsl: 51, 31%, 46%;
+    --color-cyan-rgb: 16, 77, 112;
+    --color-cyan: #104d70;
+    --color-cyan-hsl: 202, 75%, 25%;
+	--color-blue-rgb: 51, 83, 138;
+	--color-blue: #33538a;
+	--color-blue-hsl: 218, 45%, 37%;
+	--color-purple-rgb: 95, 81, 112;
+	--color-purple: #5f5170;
+	--color-purple-hsl: 267, 16%, 38%;
+	--color-pink-rgb: 141, 72, 63;
+	--color-pink: #8d483f;
+	--color-pink-hsl: 7, 38%, 40%;
 	--canvas-color: 10, 10, 10;
 	--color-base-00: #dbc7db; /* background-primary */
 	--color-base-05: #c7b0c7; /* background-secondary-alt in light mode, for some reason */
@@ -1887,9 +1905,9 @@ body {
 	--color-orange-rgb: 253, 145, 44;
 	--color-orange: #FD912C;
 	--color-orange-hsl: 29, 98%, 58%;
-	--color-yellow-rgb: 252, 220, 55;
-	--color-yellow: #FCDC37;
-	--color-yellow-hsl: 50, 97%, 60%;
+	--color-yellow-rgb: 218, 190, 47;
+	--color-yellow: #dabe2f;
+	--color-yellow-hsl: 50, 70%, 52%;
 	--color-cyan-rgb: 66, 163, 173;
 	--color-cyan: #42A3AD;
 	--color-cyan-hsl: 186, 45%, 47%;
@@ -2481,7 +2499,7 @@ body {
   /* ========================================================================== */
   
 
-body.is-frameless:not(.is-hidden-frameless):not(.is-fullscreen) .titlebar {
+  body.is-frameless:not(.is-hidden-frameless):not(.is-fullscreen) .titlebar {
     border-bottom: var(--bb-border);
     background: var(--background-primary-alt);
 }
@@ -2666,7 +2684,7 @@ span.cm-formatting.cm-formatting-highlight.cm-highlight,
     height: 2.9em;
   }
   
-  /* ========================================================================== */
+/* ========================================================================== */
   /* PART 5: TAB HEADER STYLES & STATES                                        */
   /* ========================================================================== */
   
@@ -3036,6 +3054,7 @@ body:not(.is-mobile) .workspace-sidedock-vault-profile {
     animation: slide-in-bottom 150ms;
 }
 
+
 /* ========================================================================== */
 /*  buttons  */
 /* ========================================================================== */
@@ -3145,7 +3164,7 @@ select, .dropdown {
 }
 
 .checkbox-container.is-enabled {
-	background-image: linear-gradient(40deg, var(--color-accent), var(--color-accent-1));
+	background-image: linear-gradient(40deg, var(--color-accent), hsl(calc(var(--accent-h) - 175), calc(var(--accent-s) * 1.05), calc(var(--accent-l) * 1.29)));
 	outline: none;
 	transition: var(--transition-05);
 }
@@ -3182,19 +3201,20 @@ select, .dropdown {
     border: var(--bb-border-alt);
 }
 
-body:not(.is-mobile) .modal-bg,
+/* body:not(.is-mobile) .modal-bg,
 .workspace-ribbon.mod-left::before,
 .workspace .mod-root .workspace-tab-header-inner::after,
 .markdown-source-view.mod-cm6.is-live-preview .HyperMD-quote::before,
 .markdown-preview-view blockquote::before {
 	display: none;
-}
+} */
 
 .modal-bg {
 	transition: none;
 }
 
-.workspace-leaf-content {
+
+.view-content > .markdown-source-view.mod-cm6 > .cm-editor > .cm-scroller {
 	animation: 0.15s fade cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
@@ -3455,63 +3475,8 @@ kbd,
 /*  files  */
 /* ========================================================================== */
 
-/* folder icon code from @piper_h,
-icons from tabler
-*/
-/* 
-.nav-folder-title::before {
-    content: "";
-    display: inline-block;
-    width: 14px;
-    height: 14px;
-    margin-right: 5px;
-    margin-left: -18px;
-    vertical-align: middle;
-    background-color: var(--color-base-50);
-    mask-size: contain;
-    mask-repeat: no-repeat;
-    mask-position: center;
-    mask-image: url('data:image/svg+xml;base64,PHN2ZyAgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiAgd2lkdGg9IjI0IiAgaGVpZ2h0PSIyNCIgIHZpZXdCb3g9IjAgMCAyNCAyNCIgIGZpbGw9Im5vbmUiICBzdHJva2U9ImN1cnJlbnRDb2xvciIgIHN0cm9rZS13aWR0aD0iMiIgIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgIHN0cm9rZS1saW5lam9pbj0icm91bmQiICBjbGFzcz0iaWNvbiBpY29uLXRhYmxlciBpY29ucy10YWJsZXItb3V0bGluZSBpY29uLXRhYmxlci1mb2xkZXIiPjxwYXRoIHN0cm9rZT0ibm9uZSIgZD0iTTAgMGgyNHYyNEgweiIgZmlsbD0ibm9uZSIvPjxwYXRoIGQ9Ik01IDRoNGwzIDNoN2EyIDIgMCAwIDEgMiAydjhhMiAyIDAgMCAxIC0yIDJoLTE0YTIgMiAwIDAgMSAtMiAtMnYtMTFhMiAyIDAgMCAxIDIgLTIiIC8+PC9zdmc+');
-  }
-  
-/* Change icon for open folders 
+/* add ∘ as note icons
 *
-.nav-folder:not(.is-collapsed) > .nav-folder-title::before {
-    mask-image: url('data:image/svg+xml;base64,PHN2ZyAgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiAgd2lkdGg9IjI0IiAgaGVpZ2h0PSIyNCIgIHZpZXdCb3g9IjAgMCAyNCAyNCIgIGZpbGw9Im5vbmUiICBzdHJva2U9ImN1cnJlbnRDb2xvciIgIHN0cm9rZS13aWR0aD0iMiIgIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgIHN0cm9rZS1saW5lam9pbj0icm91bmQiICBjbGFzcz0iaWNvbiBpY29uLXRhYmxlciBpY29ucy10YWJsZXItb3V0bGluZSBpY29uLXRhYmxlci1mb2xkZXItb3BlbiI+PHBhdGggc3Ryb2tlPSJub25lIiBkPSJNMCAwaDI0djI0SDB6IiBmaWxsPSJub25lIi8+PHBhdGggZD0iTTUgMTlsMi43NTcgLTcuMzUxYTEgMSAwIDAgMSAuOTM2IC0uNjQ5aDEyLjMwN2ExIDEgMCAwIDEgLjk4NiAxLjE2NGwtLjk5NiA1LjIxMWEyIDIgMCAwIDEgLTEuOTY0IDEuNjI1aC0xNC4wMjZhMiAyIDAgMCAxIC0yIC0ydi0xMWEyIDIgMCAwIDEgMiAtMmg0bDMgM2g3YTIgMiAwIDAgMSAyIDJ2MiIgLz48L3N2Zz4=');
-    background-color: var(--color-base-50);
-  }
-  
-/* Remove tree collapse icon 
-*
-  .tree-item-self .tree-item-icon.collapse-icon {
-      display: none;
-  }
-
-
-/* adds invis border so other borders dont shift text
-*
-.nav-file-title {
-    border: var(--bb-border-transparent);
-    transition: border 350ms, background 350ms;
-}
-
-.nav-folder-title {
-    font-weight: 700;
-    font-variation-settings: "wght"700;
-}
-
-/* styling for active file
-*
-.nav-file-title.is-active {
-    border: var(--bb-border-alt);
-    background: var(--background-secondary) !important;
-    border-radius: var(--radius-m);
-    animation: 0.3s pop cubic-bezier(0.17, 0.89, 0.32, 1.27);
-}
-    */
-
-/* add > as note icons
-*/
 .nav-file-title::before {
     content: "∘";
     width: 14px;
@@ -3526,8 +3491,8 @@ icons from tabler
 }
 
 /* change > infront of active folder
-*/
-.nav-file-title.is-active.nav-file-title::before {
+*
+.tree-item.nav-folder:not(.is-collapsed) .tree-item-self .tree-item-icon {
     color: var(--color-accent);
 }
 
@@ -3535,10 +3500,16 @@ icons from tabler
     background-color: var(--background-primary-alt);
     border: var(--bb-border);
     border-left: 0px solid transparent;
+    border-bottom-left-radius: 0px;
+    border-top-left-radius: 0px;
 }
 
 /* change color of title for open folders
-*/
+*
+.tree-item.nav-folder:not(.is-collapsed) .collapse-icon svg.svg-icon {
+    color: var(--color-accent);
+}
+
 .tree-item.nav-folder:not(.is-collapsed) .nav-folder-title-content {
     color: var(--color-accent);
 }
@@ -3622,7 +3593,7 @@ h1,
 .header-rainbow .markdown-reading-view h1,
 .header-rainbow h1,
 .header-rainbow .markdown-rendered h1 {
-    color: var(--color-red)
+    color: var(--color-blue)
 }
 
 .header-rainbow .HyperMD-header .cm-header-2,
@@ -3646,7 +3617,7 @@ h1,
 .header-rainbow .markdown-reading-view h4,
 .header-rainbow h4,
 .header-rainbow .markdown-rendered h4 {
-    color: var(--color-yellow)
+    color: var(--color-cyan)
 }
 
 .header-rainbow .HyperMD-header .cm-header-5,
@@ -3654,7 +3625,7 @@ h1,
 .header-rainbow .markdown-reading-view h5,
 .header-rainbow h5,
 .header-rainbow .markdown-rendered h5 {
-    color: var(--color-cyan)
+    color: var(--color-blue)
 }
 
 .header-rainbow .HyperMD-header .cm-header-6,
@@ -3662,7 +3633,7 @@ h1,
 .header-rainbow .markdown-reading-view h6,
 .header-rainbow h6,
 .header-rainbow .markdown-rendered h6 {
-    color: var(--color-blue)
+    color: var(--color-purple)
 }
 
 .text-accent .markdown-preview-view,
@@ -4453,8 +4424,8 @@ input[type="checkbox"] {
 	--h1-color: var(--color-red);
 	--h2-color: var(--color-green);
 	--h3-color: var(--color-orange);
-	--h4-color: var(--color-yellow);
-	--h5-color: var(--color-cyan);
+	--h4-color: var(--color-cyan);
+	--h5-color: var(--color-blue);
 	--h6-color: var(--color-purple);
 }
 
@@ -4716,7 +4687,7 @@ input[type="checkbox"] {
 	font-variation-settings: "WGHT" 700;
 }
 
-.o-headings-opn {
+.o-headings-opinionated {
 	--h1-size: 1.5811em;
 	--h2-size: 2.5em;
 	--h3-size: 1.9882em;
@@ -4725,7 +4696,7 @@ input[type="checkbox"] {
 	--h6-size: 0.7953em;
 }
 
-.o-headings-dec {
+.o-headings-descending {
 	--h1-size: 2.5em;
 	--h2-size: 1.842em;
 	--h3-size: 1.3572em;
@@ -4734,13 +4705,13 @@ input[type="checkbox"] {
 	--h6-size: 0.7368em;
 }
 
-.o-headings-flt {
-	--h1-size: 1em;
-	--h2-size: 1em;
-	--h3-size: 1em;
-	--h4-size: 1em;
-	--h5-size: 1em;
-	--h6-size: 1em;
+.o-headings-flat {
+	--h1-size: var(--font-text-size);
+	--h2-size: var(--font-text-size);
+	--h3-size: var(--font-text-size);
+	--h4-size: var(--font-text-size);
+	--h5-size: var(--font-text-size);
+	--h6-size: var(--font-text-size);
 }
 
 .o-mono-headers-body {
@@ -4765,8 +4736,8 @@ input[type="checkbox"] {
     --o-h1-color: var(--color-red);
     --o-h2-color: var(--color-green);
     --o-h3-color: var(--color-orange);
-    --o-h4-color: var(--color-yellow);
-    --o-h5-color: var(--color-cyan);
+    --o-h4-color: var(--color-cyan);
+    --o-h5-color: var(--color-blue);
     --o-h6-color: var(--color-purple);
 }
 
