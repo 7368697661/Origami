@@ -3951,29 +3951,41 @@ cm-s-obsidian .HyperMD-codeblock,
 
 /* tables
 */
-thead {
-    border-bottom: 1px solid var(--color-base-25);
-}
-
-tr:not(:last-child) {
-    border-bottom: 1px solid var(--color-base-25);
-}
-
-.markdown-rendered thead tr > th:first-child {
-    border-right: 1px solid var(--color-accent);
-}
-
-
-.markdown-rendered tbody tr > td:not(:last-child) {
-    border-right: 1px solid var(--color-accent);
-}
 
 .markdown-source-view.mod-cm6 .cm-table-widget .table-row-btn, .markdown-source-view.mod-cm6 .cm-table-widget .table-col-btn {
-    background: hsla(var(--color-accent-hsl), 0.3);
+    background: var(--background-secondary);
     border-radius: var(--radius-s);
-    border: 1px solid hsla(var(--color-accent-hsl), 0.5);
+    border: var(--bb-border);
     color: var(--text-on-accent);
 }
+
+/*
+author: FireIsGood
+source: https://discord.com/channels/686053708261228577/702656734631821413/1112164539975340032
+*/
+
+:root table {
+    border-collapse: separate;
+    border-spacing: 0;
+  }
+  th:first-of-type {
+    border-top-left-radius: 8px;
+  }
+  th:last-of-type {
+    border-top-right-radius: 8px;
+  }
+  tr:last-of-type td:first-of-type {
+    border-bottom-left-radius: 8px;
+  }
+  tr:last-of-type td:last-of-type {
+    border-bottom-right-radius: 8px;
+  }
+  
+  :root :is(td, th) {
+    border-width: 0 var(--table-border-width) var(--table-border-width) 0;
+  }
+
+
 
 /* note checkboxes */
 input[type="checkbox"] {
@@ -4380,11 +4392,18 @@ input[type="checkbox"] {
     color: var(--text-normal);
 }
 
+/* make images round
+*/
+
+img {
+    border-radius: var(--radius-l);
+}
+
 /* callouts
 */
 .callout {
     /* background: linear-gradient(135deg, rgba(var(--callout-color), .3), rgba(var(--callout-color), .6)) !important; */
-    background: var(--background-primary);
+    background: rgba(var(--callout-color), .1);
     position: relative;
     border: 1px dashed rgba(var(--callout-color), 1) !important;
     box-shadow: none;
@@ -4463,15 +4482,13 @@ input[type="checkbox"] {
 .o-header-lapel .markdown-reading-view h1:not(.embedded-note-title)::before {
 	content: ' ';
 
-	font-size: 12px;
-
     height: var(--h1-size);
 	width: 6px;
 
 	color: var(--text-on-accent);
 	background: var(--color-red);
 
-	position: absolute;
+	position: sticky;
 	left: 6px;
 
     padding-left: 4px;
@@ -4482,12 +4499,11 @@ input[type="checkbox"] {
 .o-header-lapel .cm-header-1::before {
     inline-size: auto;
     content: " ";
-    font-size: 12px;
     height: var(--h1-size);
     width: 6px;
     color: var(--text-on-accent);
     background: var(--color-red);
-    position: absolute;
+    position: sticky;
     top: 40%;
     left: -28px;
     padding-left: 4px;
@@ -4500,15 +4516,13 @@ input[type="checkbox"] {
 .o-header-lapel .markdown-reading-view h2:not(.embedded-note-title)::before {
 	content: ' ';
 
-	font-size: 12px;
-
     height: var(--h2-size);
 	width: 6px;
 
 	color: var(--text-on-accent);
 	background: var(--color-green);
 
-	position: absolute;
+	position: sticky;
 	left: 6px;
 
     padding-left: 4px;
@@ -4519,12 +4533,11 @@ input[type="checkbox"] {
 .o-header-lapel .cm-header-2::before {
     inline-size: auto;
     content: " ";
-    font-size: 12px;
     height: var(--h2-size);
     width: 6px;
     color: var(--text-on-accent);
     background: var(--color-green);
-    position: absolute;
+    position: sticky;
     top: 40%;
     left: -28px;
     padding-left: 4px;
@@ -4537,15 +4550,13 @@ input[type="checkbox"] {
 .o-header-lapel .markdown-reading-view h3:not(.embedded-note-title)::before {
 	content: ' ';
 
-	font-size: 12px;
-
     height: var(--h3-size);
 	width: 6px;
 
 	color: var(--text-on-accent);
 	background: var(--color-orange);
 
-	position: absolute;
+	position: sticky;
 	left: 6px;
 
     padding-left: 4px;
@@ -4556,12 +4567,11 @@ input[type="checkbox"] {
 .o-header-lapel .cm-header-3::before {
     inline-size: auto;
     content: " ";
-    font-size: 12px;
     height: var(--h3-size);
     width: 6px;
     color: var(--text-on-accent);
     background: var(--color-orange);
-    position: absolute;
+    position: sticky;
     top: 40%;
     left: -28px;
     padding-left: 4px;
@@ -4574,15 +4584,13 @@ input[type="checkbox"] {
 .o-header-lapel .markdown-reading-view h4:not(.embedded-note-title)::before {
 	content: ' ';
 
-	font-size: 12px;
-
     height: var(--h4-size);
 	width: 6px;
 
 	color: var(--text-on-accent);
 	background: var(--color-cyan);
 
-	position: absolute;
+	position: sticky;
 	left: 6px;
 
     padding-left: 4px;
@@ -4593,12 +4601,11 @@ input[type="checkbox"] {
 .o-header-lapel .cm-header-4::before {
     inline-size: auto;
     content: " ";
-    font-size: 12px;
     height: var(--h4-size);
     width: 6px;
     color: var(--text-on-accent);
     background: var(--color-cyan);
-    position: absolute;
+    position: sticky;
     top: 40%;
     left: -28px;
     padding-left: 4px;
@@ -4611,15 +4618,13 @@ input[type="checkbox"] {
 .o-header-lapel .markdown-reading-view h5:not(.embedded-note-title)::before {
 	content: ' ';
 
-	font-size: 12px;
-
     height: var(--h5-size);
 	width: 6px;
 
 	color: var(--text-on-accent);
 	background: var(--color-blue);
 
-	position: absolute;
+	position: sticky;
 	left: 6px;
 
     padding-left: 4px;
@@ -4630,12 +4635,11 @@ input[type="checkbox"] {
 .o-header-lapel .cm-header-5::before {
     inline-size: auto;
     content: " ";
-    font-size: 12px;
     height: var(--h5-size);
     width: 6px;
     color: var(--text-on-accent);
     background: var(--color-blue);
-    position: absolute;
+    position: sticky;
     top: 40%;
     left: -28px;
     padding-left: 4px;
@@ -4648,15 +4652,13 @@ input[type="checkbox"] {
 .o-header-lapel .markdown-reading-view h6:not(.embedded-note-title)::before {
 	content: ' ';
 
-	font-size: 12px;
-
     height: var(--h6-size);
 	width: 6px;
 
 	color: var(--text-on-accent);
 	background: var(--color-purple);
 
-	position: absolute;
+	position: sticky;
 	left: 6px;
 
     padding-left: 4px;
@@ -4667,12 +4669,11 @@ input[type="checkbox"] {
 .o-header-lapel .cm-header-6::before {
     inline-size: auto;
     content: " ";
-    font-size: 12px;
     height: var(--h6-size);
     width: 6px;
     color: var(--text-on-accent);
     background: var(--color-purple);
-    position: absolute;
+    position: sticky;
     top: 40%;
     left: -28px;
     padding-left: 4px;
