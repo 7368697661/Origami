@@ -205,6 +205,9 @@ settings:
         -
             label: flat
             value: o-headings-flat
+        -
+            label: fabulous
+            value: o-headings-fabulous
 
   -
     id: o-header-line-accent
@@ -1120,7 +1123,7 @@ body {
 }
 
 .serif {
-    --font-text-theme: "Fraunces", sans-serif;
+    --font-text: "Fraunces", sans-serif;
 }
 
   /* ========================================================================== */
@@ -1333,31 +1336,31 @@ body {
 }
 
 .aspekta {
-    --font-text-theme: "Aspekta", sans-serif;
+    --font-text: "Aspekta", sans-serif;
 }
 
 .iawriter {
-    --font-text-theme: "IAWriter", sans-serif;
+    --font-text: "IAWriter", sans-serif;
 }
 
 .satoshi {
-    --font-text-theme: "Satoshi", sans-serif;
+    --font-text: "Satoshi", sans-serif;
 }
 
 .lexend {
-    --font-text-theme: "Lexend", sans-serif;
+    --font-text: "Lexend", sans-serif;
 }
 
 .fraunces {
-    --font-text-theme: "Fraunces", sans-serif;
+    --font-text: "Fraunces", sans-serif;
 }
 
 .chillax {
-    --font-text-theme: "Chillax", sans-serif;
+    --font-text: "Chillax", sans-serif;
 }
 
 .monaspace {
-    --font-text-theme: "Monaspace", sans-serif;
+    --font-text: "Monaspace", sans-serif;
 }
 
 /* themes */
@@ -3644,7 +3647,7 @@ h1,
 
 .markdown-preview-view,
 .cm-content {
-    font-family: var(--font-text-theme);
+    font-family: var(--font-text);
     font-variation-settings: inherit;
     font-variation-settings: "wght"500, "SOFT"100, "WONK"0, "opsz"9;
     font-weight: 500;
@@ -4496,7 +4499,7 @@ img {
     border-radius: 8px;
 }
 
-.o-header-lapel .cm-header-1::before {
+.o-header-lapel :nth-child(1 of .cm-header-1)::before {
     inline-size: auto;
     content: " ";
     height: var(--h1-size);
@@ -4530,7 +4533,7 @@ img {
     border-radius: 8px;
 }
 
-.o-header-lapel .cm-header-2::before {
+.o-header-lapel :nth-child(1 of .cm-header-2)::before {
     inline-size: auto;
     content: " ";
     height: var(--h2-size);
@@ -4564,7 +4567,7 @@ img {
     border-radius: 8px;
 }
 
-.o-header-lapel .cm-header-3::before {
+.o-header-lapel :nth-child(1 of .cm-header-3)::before {
     inline-size: auto;
     content: " ";
     height: var(--h3-size);
@@ -4598,7 +4601,7 @@ img {
     border-radius: 8px;
 }
 
-.o-header-lapel .cm-header-4::before {
+.o-header-lapel :nth-child(1 of .cm-header-4)::before {
     inline-size: auto;
     content: " ";
     height: var(--h4-size);
@@ -4632,7 +4635,7 @@ img {
     border-radius: 8px;
 }
 
-.o-header-lapel .cm-header-5::before {
+.o-header-lapel :nth-child(1 of .cm-header-5)::before {
     inline-size: auto;
     content: " ";
     height: var(--h5-size);
@@ -4666,7 +4669,7 @@ img {
     border-radius: 8px;
 }
 
-.o-header-lapel .cm-header-6::before {
+.o-header-lapel :nth-child(1 of .cm-header-6)::before {
     inline-size: auto;
     content: " ";
     height: var(--h6-size);
@@ -4715,6 +4718,15 @@ img {
 	--h4-size: 1.250em;
 	--h5-size: 1em;
 	--h6-size: 0.8368em;
+}
+
+.o-headings-fabulous {
+	--h1-size: 2em;
+	--h2-size: 1.5em;
+	--h3-size: 1.4em;
+	--h4-size: 1.3em;
+	--h5-size: 1.2em;
+	--h6-size: 1.1em;
 }
 
 .o-headings-flat {
