@@ -2291,6 +2291,13 @@ body {
 	--color-base-100: #E8ECF5;
 }
 
+.o-lyt-dt em,
+.o-lyt-dt strong,
+.o-lyt-dt .cm-em,
+.o-lyt-dt .cm-strong {
+    color: var(--color-base-70);
+}
+
 
 /* abaddon
 */
@@ -2554,7 +2561,6 @@ body:not(.is-mobile) .workspace-split.mod-left-split .workspace-sidedock-vault-p
 .mod-vertical .workspace-tab-container,
 
 /* Highlight and Formatting */
-span.cm-formatting.cm-formatting-highlight.cm-highlight,
 .is-hidden-frameless:not(.is-fullscreen).is-focused .titlebar-button-container.mod-right {
     background: transparent;
 }
@@ -3673,6 +3679,13 @@ strong,
     font-weight: 700;
 }
 
+.cm-s-obsidian span.cm-formatting-highlight, .cm-s-obsidian span.cm-highlight {
+    background-color: rgba(var(--color-accent-rgb), .2);
+    color: var(--text-accent);
+    border-radius: var(--radius-m);
+    padding: 2px 6px;
+}
+
 /* different color italic/bold
 */
 .o-bold-italic em,
@@ -3685,7 +3698,7 @@ strong,
 .markdown-source-view.mod-cm6 .cm-underline {
     color: var(--text-normal);
     text-decoration: underline;
-    text-decoration-color: var(--text-normal);
+    text-decoration-color: var(--text-accent);
     text-decoration-thickness: 2px;
     font-weight: 700;
     transition: 700ms;
@@ -3694,7 +3707,7 @@ strong,
 .markdown-source-view.mod-cm6 .cm-underline:hover {
     transition: 700ms;
     text-decoration: underline !important;
-    text-decoration-color: var(--color-accent) !important;
+    text-decoration-color: var(--color-normal) !important;
     text-decoration-thickness: 2px !important;
 }
 
