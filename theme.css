@@ -3753,46 +3753,6 @@ strong,
     color: var(--text-normal);
 }
 
-/* Smooth Live Headers by Luke242#8485
-*/
-.is-live-preview .cm-widgetBuffer+.cm-header {
-    display: unset;
-    animation: outdent 275ms ease-out;
-}
-
-.is-live-preview .cm-widgetBuffer+.cm-header.cm-formatting {
-    animation: opac 275ms ease-in;
-}
-
-.is-live-preview .cm-active .cm-header+.cm-header {
-    display: unset;
-    animation: indent 275ms ease-out;
-}
-
-.cm-header-1 {
-    --header-offset: 2rem;
-}
-
-.cm-header-2 {
-    --header-offset: 3rem;
-}
-
-.cm-header-3 {
-    --header-offset: 3rem;
-}
-
-.cm-header-4 {
-    --header-offset: 3rem;
-}
-
-.cm-header-5 {
-    --header-offset: 3rem;
-}
-
-.cm-header-6 {
-    --header-offset: 3rem;
-}
-
 .o-justify .markdown-source-view.mod-cm6 .cm-line,
 .o-justify .markdown-rendered p {
     text-align: justify;
@@ -4504,7 +4464,7 @@ img {
 	color: var(--text-on-accent);
 	background: var(--color-red);
 
-	position: sticky;
+
 	left: 6px;
 
     padding-left: 4px;
@@ -4519,7 +4479,6 @@ img {
     width: 6px;
     color: var(--text-on-accent);
     background: var(--color-red);
-    position: sticky;
     top: 40%;
     left: -28px;
     padding-left: 4px;
@@ -4538,7 +4497,7 @@ img {
 	color: var(--text-on-accent);
 	background: var(--color-green);
 
-	position: sticky;
+
 	left: 6px;
 
     padding-left: 4px;
@@ -4553,7 +4512,7 @@ img {
     width: 6px;
     color: var(--text-on-accent);
     background: var(--color-green);
-    position: sticky;
+
     top: 40%;
     left: -28px;
     padding-left: 4px;
@@ -4572,7 +4531,7 @@ img {
 	color: var(--text-on-accent);
 	background: var(--color-orange);
 
-	position: sticky;
+
 	left: 6px;
 
     padding-left: 4px;
@@ -4587,7 +4546,7 @@ img {
     width: 6px;
     color: var(--text-on-accent);
     background: var(--color-orange);
-    position: sticky;
+
     top: 40%;
     left: -28px;
     padding-left: 4px;
@@ -4606,7 +4565,7 @@ img {
 	color: var(--text-on-accent);
 	background: var(--color-cyan);
 
-	position: sticky;
+
 	left: 6px;
 
     padding-left: 4px;
@@ -4621,7 +4580,7 @@ img {
     width: 6px;
     color: var(--text-on-accent);
     background: var(--color-cyan);
-    position: sticky;
+
     top: 40%;
     left: -28px;
     padding-left: 4px;
@@ -4640,7 +4599,7 @@ img {
 	color: var(--text-on-accent);
 	background: var(--color-blue);
 
-	position: sticky;
+
 	left: 6px;
 
     padding-left: 4px;
@@ -4655,7 +4614,7 @@ img {
     width: 6px;
     color: var(--text-on-accent);
     background: var(--color-blue);
-    position: sticky;
+
     top: 40%;
     left: -28px;
     padding-left: 4px;
@@ -4674,7 +4633,7 @@ img {
 	color: var(--text-on-accent);
 	background: var(--color-purple);
 
-	position: sticky;
+
 	left: 6px;
 
     padding-left: 4px;
@@ -4689,7 +4648,7 @@ img {
     width: 6px;
     color: var(--text-on-accent);
     background: var(--color-purple);
-    position: sticky;
+
     top: 40%;
     left: -28px;
     padding-left: 4px;
