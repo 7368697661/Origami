@@ -364,6 +364,8 @@ body {
     --callout-todo: var(--color-blue-rgb);
     --callout-warning: var(--color-orange-rgb);
     --callout-quote: 158, 158, 158;
+    --callout-cite: 87, 61, 132;
+    --text-cite: 87, 161, 132;
 
     /* Canvas 
 	*/
@@ -4425,8 +4427,9 @@ img {
 .callout[data-callout="failure"],
 .callout[data-callout="danger"],
 .callout[data-callout="bug"],
-.callout[data-callout="quote"] {
-  color: rgb(var(--callout-color));
+.callout[data-callout="quote"],
+.callout[data-callout="cite"] {
+    color: rgb(var(--callout-color));
 }
 
 .markdown-source-view.mod-cm6 .cm-embed-block:not(.cm-table-widget):hover {
@@ -4475,7 +4478,7 @@ img {
 .o-header-lapel :nth-child(1 of .cm-header-1)::before {
     inline-size: auto;
     content: " ";
-    height: var(--h1-size);
+    height: 1em;
     width: 6px;
     color: var(--text-on-accent);
     background: var(--color-red);
@@ -4484,6 +4487,7 @@ img {
     padding-left: 4px;
     margin-right: 16px;
     border-radius: 8px;
+    display: inline-block;
 }
 
 /* header 2 gibblet
@@ -4508,7 +4512,7 @@ img {
 .o-header-lapel :nth-child(1 of .cm-header-2)::before {
     inline-size: auto;
     content: " ";
-    height: var(--h2-size);
+    height: 1em;
     width: 6px;
     color: var(--text-on-accent);
     background: var(--color-green);
@@ -4518,6 +4522,7 @@ img {
     padding-left: 4px;
     margin-right: 16px;
     border-radius: 8px;
+    display: inline-block;
 }
 
 /* header 3 gibblet
@@ -4542,7 +4547,7 @@ img {
 .o-header-lapel :nth-child(1 of .cm-header-3)::before {
     inline-size: auto;
     content: " ";
-    height: var(--h3-size);
+    height: 1em;
     width: 6px;
     color: var(--text-on-accent);
     background: var(--color-orange);
@@ -4552,6 +4557,7 @@ img {
     padding-left: 4px;
     margin-right: 16px;
     border-radius: 8px;
+    display: inline-block;
 }
 
 /* header 4 gibblet
@@ -4559,7 +4565,7 @@ img {
 .o-header-lapel .markdown-reading-view h4:not(.embedded-note-title)::before {
 	content: ' ';
 
-    height: var(--h4-size);
+    height: 1em;
 	width: 6px;
 
 	color: var(--text-on-accent);
@@ -4576,7 +4582,7 @@ img {
 .o-header-lapel :nth-child(1 of .cm-header-4)::before {
     inline-size: auto;
     content: " ";
-    height: var(--h4-size);
+    height: 1em;
     width: 6px;
     color: var(--text-on-accent);
     background: var(--color-cyan);
@@ -4586,6 +4592,7 @@ img {
     padding-left: 4px;
     margin-right: 16px;
     border-radius: 8px;
+    display: inline-block;
 }
 
 /* header 5 gibblet
@@ -4610,7 +4617,7 @@ img {
 .o-header-lapel :nth-child(1 of .cm-header-5)::before {
     inline-size: auto;
     content: " ";
-    height: var(--h5-size);
+    height: 1em;
     width: 6px;
     color: var(--text-on-accent);
     background: var(--color-blue);
@@ -4620,6 +4627,7 @@ img {
     padding-left: 4px;
     margin-right: 16px;
     border-radius: 8px;
+    display: inline-block;
 }
 
 /* header 6 gibblet
@@ -4644,7 +4652,7 @@ img {
 .o-header-lapel :nth-child(1 of .cm-header-6)::before {
     inline-size: auto;
     content: " ";
-    height: var(--h6-size);
+    height: 1em;
     width: 6px;
     color: var(--text-on-accent);
     background: var(--color-purple);
@@ -4654,6 +4662,7 @@ img {
     padding-left: 4px;
     margin-right: 16px;
     border-radius: 8px;
+    display: inline-block;
 }
 
 .o-headings-origami {
