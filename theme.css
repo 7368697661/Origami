@@ -2369,6 +2369,20 @@ body {
     }
 }
 
+@keyframes pop-trans {
+    0% {
+        transform: var(--persistent-transform, ) scale(1);
+    }
+
+    50% {
+        transform: var(--persistent-transform, ) scale(0.9);
+    }
+
+    100% {
+        transform: var(--persistent-transform, ) scale(1);
+    }
+}
+
 @-webkit-keyframes slide-right {
     0% {
               transform: translateX(-20px);
@@ -2508,7 +2522,7 @@ body {
 }
 
   /* ========================================================================== */
-  /* PART 3: BASE LEVEL EDITS                                                   */
+/* part 3: base level edits                                                   */
   /* ========================================================================== */
   
 
@@ -2660,7 +2674,7 @@ body:not(.is-mobile) .workspace-split.mod-left-split .workspace-sidedock-vault-p
 
 
   /* ========================================================================== */
-  /* PART 4: WORKSPACE / TAB CONTAINER STYLES                                  */
+/* part 4: workspace / tab container styles                                  */
   /* ========================================================================== */
   
   /* workspace tab containers */
@@ -2694,10 +2708,10 @@ body:not(.is-mobile) .workspace-split.mod-left-split .workspace-sidedock-vault-p
   .workspace-split.mod-right-split .workspace-tabs:not(.mod-top) 
   > .workspace-tab-header-container {
     height: 2.9em;
-  }
-  
+}
+
 /* ========================================================================== */
-  /* PART 5: TAB HEADER STYLES & STATES                                        */
+/* part 5: tab header styles & states                                        */
   /* ========================================================================== */
   
   /* pinned tab max-width */
@@ -2864,7 +2878,7 @@ body:not(.is-mobile) .workspace-split.mod-left-split .workspace-sidedock-vault-p
 }
   
   /* ========================================================================== */
-  /*  VIEW HEADER & VIEW CONTENT STYLES  */
+/* view header & view content styles */
   /* ========================================================================== */
   
   /* content padding in markdown editor */
@@ -2905,10 +2919,10 @@ body:not(.is-mobile) .workspace-split.mod-left-split .workspace-sidedock-vault-p
   }
 
 /* ==========================================================================
-   RIBBON STYLES
+ribbon styles
    ========================================================================== */
 
-/* GENERAL RIBBON STYLES */
+/* general ribbon styles */
 .workspace-ribbon {
     border-right: var(--bb-border) !important;
     background: var(--background-primary-alt);
@@ -2918,13 +2932,13 @@ body:not(.is-mobile) .workspace-split.mod-left-split .workspace-sidedock-vault-p
     border-bottom: none;
   }
   
-  /* COLLAPSED RIBBON (LEFT) */
+/* collapsed ribbon (left) */
   .workspace-ribbon.mod-left.is-collapsed {
     background: var(--background-secondary);
   }
   
   /* ==========================================================================
-     SIDEBAR TOGGLE BUTTON STYLES
+    sidebar toggle button styles
      ========================================================================== */
   
   .workspace-ribbon.mod-left .sidebar-toggle-button {
@@ -3490,16 +3504,27 @@ kbd,
 /* add ∘ as note icons
 */
 .nav-file-title::before {
-    content: "∘";
+    content: "○";
     width: 14px;
     height: 14px;
     display: inline-block;
     color: var(--text-normal);
     flex-shrink: 0;
+    margin-right: 4px;
 }
 
-.tree-item-children .nav-file-title {
-    transform: translateX(-12px);
+.nav-file-title {
+    --persistent-transform: translateX(-15px);
+    transform: var(--persistent-transform);
+}
+
+.nav-file-title > * {
+    --persistent-transform: ;
+}
+
+.nav-file-title.is-active {
+    transform-origin: left center;
+    animation: pop-trans 350ms;
 }
 
 /* change > infront of active folder
@@ -3508,12 +3533,26 @@ kbd,
     color: var(--color-accent);
 }
 
+.nav-file-title {
+    border: 1px solid transparent;
+}
+
 .nav-file-title.is-active {
     background-color: var(--background-primary-alt);
     border: var(--bb-border);
     border-left: 0px solid transparent;
     border-bottom-left-radius: 0px;
     border-top-left-radius: 0px;
+}
+
+.nav-file-title.is-active::before {
+    content: "●";
+    width: 14px;
+    height: 14px;
+    display: inline-block;
+    color: var(--text-accent);
+    flex-shrink: 0;
+    margin-right: 4px;
 }
 
 /* change color of title for open folders
@@ -3772,6 +3811,16 @@ strong,
 
 /* blockqoutes
 */
+
+.markdown-source-view.mod-cm6.is-live-preview .HyperMD-quote {
+    font-style: var(--blockquote-style);
+    background-color: var(--background-primary-pre-alt);
+    border: var(--bb-border-dashed);
+    border-radius: var(--radius-l);
+    padding: 16px 4px;
+    border-left: 3px solid var(--color-accent);
+}
+
 .markdown-preview-view blockquote {
     color: var(--text-normal);
     background: var(--background-secondary);
@@ -3816,22 +3865,21 @@ strong,
     border-radius: var(--button-radius);
 }
 
-.markdown-source-view.mod-cm6.is-live-preview .HyperMD-quote::before,
-.markdown-source-view.mod-cm6 .cm-blockquote-border::before {
-    display: block;
-    content: "\200b";
-
-    width: 1px;
-
-    color: red;
-
-    position: absolute;
-    top: 0;
-    bottom: 0;
-
-    border-left:
-        var(--blockquote-border-thickness) solid var(--color-accent);
+/* Remove the > symbol in Live Preview mode */
+.markdown-source-view.mod-cm6 .cm-line .cm-quote::before {
+    color: transparent !important;
 }
+
+/* Remove the > symbol in Source View */
+.cm-s-obsidian span.cm-formatting-quote {
+    color: transparent !important;
+}
+
+/* Remove the > symbol in Preview View */
+.markdown-preview-view blockquote::before {
+    color: transparent;
+}
+
 
 /* .markdown-source-view.mod-cm6.is-live-preview .HyperMD-quote {
     font-style: var(--blockquote-style);
@@ -3841,13 +3889,22 @@ strong,
     padding: 16px 8px;
 } */
 
-.markdown-source-view.mod-cm6.is-live-preview .HyperMD-quote {
-    border-left: 1px solid var(--color-accent);
+.markdown-source-view.mod-cm6.is-live-preview .HyperMD-quote:before, .markdown-source-view.mod-cm6 .cm-blockquote-border:before {
+    content: "\200b";
+    display: none;
+    width: 1px;
+    border-inline-start: var(--blockquote-border-thickness) solid var(--blockquote-border-color);
+    color: transparent;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    pointer-events: none;
+    margin: 8px;
 }
 
 .cm-s-obsidian span.cm-formatting-quote {
     color: var(--color-accent);
-    padding-left: 8px;
+    /* padding-left: 1.6em; */
 }
 
 .markdown-preview-view blockquote::before {
@@ -4458,211 +4515,92 @@ img {
 
 /* header 1 gibblet
 */
-.o-header-lapel .markdown-reading-view h1:not(.embedded-note-title)::before {
-	content: ' ';
-
-    height: var(--h1-size);
-	width: 6px;
-
-	color: var(--text-on-accent);
-	background: var(--color-red);
-
-
-	left: 6px;
-
-    padding-left: 4px;
-    margin-right: 16px;
-    border-radius: 8px;
-}
-
+.o-header-lapel .markdown-reading-view h1:not(.embedded-note-title)::before,
 .o-header-lapel :nth-child(1 of .cm-header-1)::before {
-    inline-size: auto;
-    content: " ";
-    height: 1em;
-    width: 6px;
+    content: "";
+    display: inline-block;
+    height: 1.2em;
+    width: 4px;
     color: var(--text-on-accent);
     background: var(--color-red);
-    top: 40%;
-    left: -28px;
-    padding-left: 4px;
     margin-right: 16px;
     border-radius: 8px;
-    display: inline-block;
+    vertical-align: bottom;
 }
 
 /* header 2 gibblet
 */
-.o-header-lapel .markdown-reading-view h2:not(.embedded-note-title)::before {
-	content: ' ';
-
-    height: var(--h2-size);
-	width: 6px;
-
-	color: var(--text-on-accent);
-	background: var(--color-green);
-
-
-	left: 6px;
-
-    padding-left: 4px;
-    margin-right: 16px;
-    border-radius: 8px;
-}
-
+.o-header-lapel .markdown-reading-view h2:not(.embedded-note-title)::before,
 .o-header-lapel :nth-child(1 of .cm-header-2)::before {
-    inline-size: auto;
-    content: " ";
-    height: 1em;
-    width: 6px;
+    content: "";
+    display: inline-block;
+    height: 1.2em;
+    width: 4px;
     color: var(--text-on-accent);
     background: var(--color-green);
-
-    top: 40%;
-    left: -28px;
-    padding-left: 4px;
     margin-right: 16px;
     border-radius: 8px;
-    display: inline-block;
+    vertical-align: bottom;
 }
 
 /* header 3 gibblet
 */
-.o-header-lapel .markdown-reading-view h3:not(.embedded-note-title)::before {
-	content: ' ';
-
-    height: var(--h3-size);
-	width: 6px;
-
-	color: var(--text-on-accent);
-	background: var(--color-orange);
-
-
-	left: 6px;
-
-    padding-left: 4px;
-    margin-right: 16px;
-    border-radius: 8px;
-}
-
+.o-header-lapel .markdown-reading-view h3:not(.embedded-note-title)::before,
 .o-header-lapel :nth-child(1 of .cm-header-3)::before {
-    inline-size: auto;
-    content: " ";
-    height: 1em;
-    width: 6px;
+    content: "";
+    display: inline-block;
+    height: 1.2em;
+    width: 4px;
     color: var(--text-on-accent);
     background: var(--color-orange);
-
-    top: 40%;
-    left: -28px;
-    padding-left: 4px;
     margin-right: 16px;
     border-radius: 8px;
-    display: inline-block;
+    vertical-align: bottom;
 }
 
 /* header 4 gibblet
 */
-.o-header-lapel .markdown-reading-view h4:not(.embedded-note-title)::before {
-	content: ' ';
-
-    height: 1em;
-	width: 6px;
-
-	color: var(--text-on-accent);
-	background: var(--color-cyan);
-
-
-	left: 6px;
-
-    padding-left: 4px;
-    margin-right: 16px;
-    border-radius: 8px;
-}
-
+.o-header-lapel .markdown-reading-view h4:not(.embedded-note-title)::before,
 .o-header-lapel :nth-child(1 of .cm-header-4)::before {
-    inline-size: auto;
-    content: " ";
-    height: 1em;
-    width: 6px;
+    content: "";
+    display: inline-block;
+    height: 1.2em;
+    width: 4px;
     color: var(--text-on-accent);
     background: var(--color-cyan);
-
-    top: 40%;
-    left: -28px;
-    padding-left: 4px;
     margin-right: 16px;
     border-radius: 8px;
-    display: inline-block;
+    vertical-align: bottom;
 }
 
 /* header 5 gibblet
 */
-.o-header-lapel .markdown-reading-view h5:not(.embedded-note-title)::before {
-	content: ' ';
-
-    height: var(--h5-size);
-	width: 6px;
-
-	color: var(--text-on-accent);
-	background: var(--color-blue);
-
-
-	left: 6px;
-
-    padding-left: 4px;
-    margin-right: 16px;
-    border-radius: 8px;
-}
-
+.o-header-lapel .markdown-reading-view h5:not(.embedded-note-title)::before,
 .o-header-lapel :nth-child(1 of .cm-header-5)::before {
-    inline-size: auto;
-    content: " ";
-    height: 1em;
-    width: 6px;
+    content: "";
+    display: inline-block;
+    height: 1.2em;
+    width: 4px;
     color: var(--text-on-accent);
     background: var(--color-blue);
-
-    top: 40%;
-    left: -28px;
-    padding-left: 4px;
     margin-right: 16px;
     border-radius: 8px;
-    display: inline-block;
+    vertical-align: bottom;
 }
 
 /* header 6 gibblet
 */
-.o-header-lapel .markdown-reading-view h6:not(.embedded-note-title)::before {
-	content: ' ';
-
-    height: var(--h6-size);
-	width: 6px;
-
-	color: var(--text-on-accent);
-	background: var(--color-purple);
-
-
-	left: 6px;
-
-    padding-left: 4px;
-    margin-right: 16px;
-    border-radius: 8px;
-}
-
+.o-header-lapel .markdown-reading-view h6:not(.embedded-note-title)::before,
 .o-header-lapel :nth-child(1 of .cm-header-6)::before {
-    inline-size: auto;
-    content: " ";
-    height: 1em;
-    width: 6px;
+    content: "";
+    display: inline-block;
+    height: 1.2em;
+    width: 4px;
     color: var(--text-on-accent);
     background: var(--color-purple);
-
-    top: 40%;
-    left: -28px;
-    padding-left: 4px;
     margin-right: 16px;
     border-radius: 8px;
-    display: inline-block;
+    vertical-align: bottom;
 }
 
 .o-headings-origami {
@@ -5207,9 +5145,9 @@ body {
     border-radius: var(--radius-l);
 }
 
-.setting-item:first-child {
+.setting-item.style-settings-heading:first-child {
     padding-top: 18px;
-    border-top: var(--bb-border);
+    border-top: 1px solid var(--color-base-30) !important;
 }
 
 .style-settings-heading[data-level="1"]
@@ -5230,6 +5168,108 @@ body {
     padding: 32px 28px;
     border: var(--bb-border);
     border-radius: var(--radius-l);
+}
+
+/* chat view
+*/
+/* div.chat-view-bubble-mode-default {
+    padding: 12px;
+    background-color: var(--background-primary-alt);
+    border: var(--bb-border);
+    border-radius: 16px;
+}
+
+div.chat-view-align-right {
+    background-color: rgba(var(--color-accent-rgb), 0.3);
+    border: 1px solid rgba(var(--color-accent-rgb), 0.5);
+}*/
+
+div.chat-view-align-right > h4.chat-view-header {
+    color: var(--text-accent);
+    display: flex;
+    justify-content: flex-end;
+}
+
+div.chat-view-align-left > h4.chat-view-header {
+    color: var(--text-normal);
+}
+
+div.chat-view-bubble-mode-default > h4.chat-view-header {
+    font-size: 1em;
+}
+
+.block-language-chat {
+    --tail-width: 20px;
+    --tail-height: 15px;
+    padding-inline: var(--tail-width);
+}
+/* Style for the main bubble.
+    To make sure we keep the style consistent between the tail and the bubbles,
+    I put everything in variables. */
+div.chat-view-bubble {
+    --chat-bubble-border-width: 1px;
+    --chat-bubble-border: var(--chat-bubble-border-width) solid var(--chat-bubble-border-color);
+    position: relative;
+    background-color: var(--chat-bubble-bg);
+    border: var(--chat-bubble-border);
+}
+div.chat-view-bubble.chat-view-align-left {
+    --chat-bubble-bg: var(--background-primary-alt);
+    --chat-bubble-border-color: var(--color-base-30);
+    border-bottom-left-radius: 0 !important; /* Straighten the corner angle */
+    border-radius: var(--radius-l);
+}
+div.chat-view-bubble.chat-view-align-right {
+    /* Alpha is not possible because we will have overlap between elements,
+        so we cheat by mixing with the note background */
+    --chat-bubble-bg: color-mix(in srgb, var(--background-primary), var(--color-accent) 30%);
+    --chat-bubble-border-color: color-mix(in srgb, var(--background-primary), var(--color-accent) 50%);
+    border-bottom-right-radius: 0 !important;
+    border-radius: var(--radius-l);
+}
+
+/* Shared style for the pseudo-element.
+    The ::before will be the main shape of the tail.
+    The ::after will only serve to add a little bottom border.*/
+div.chat-view-bubble::before,
+div.chat-view-bubble::after {
+    content: "";
+    position: absolute;
+    display: block;
+    height: var(--tail-height);
+    background: none;
+    bottom: calc(-1 * var(--chat-bubble-border-width));
+}
+/* The tail itself is created by the box shadow that will follow the radius of the element,
+    therefore, creating a "reversed" border-radius.
+    And the border following the curve is the first part of the box shadow, only 1px large */
+div.chat-view-bubble::before {
+    width: calc(var(--tail-width) * 2);
+}
+div.chat-view-bubble.chat-view-align-left::before {
+    left: calc(-2 * var(--tail-width) - var(--chat-bubble-border-width));
+    border-bottom-right-radius: 50% 100%;
+    box-shadow:
+        calc(1 * var(--chat-bubble-border-width)) 0 var(--chat-bubble-border-color),
+        calc(1 * var(--tail-width)) 0 var(--chat-bubble-bg);
+}
+div.chat-view-bubble.chat-view-align-right::before {
+    right: calc(-2 * var(--tail-width) - var(--chat-bubble-border-width));
+    border-bottom-left-radius: 50% 100%;
+    box-shadow:
+        calc(-1 * var(--chat-bubble-border-width)) 0 var(--chat-bubble-border-color),
+        calc(-1 * var(--tail-width)) 0 var(--chat-bubble-bg);
+}
+/* We now place the bottom border */
+div.chat-view-bubble::after {
+    border-bottom: var(--chat-bubble-border);
+    width: var(--tail-width);
+}
+div.chat-view-bubble.chat-view-align-left::after {
+    left: calc(-1 * var(--tail-width) + 6px); /* The +6px could technically be computed mathematically... but I'm lazy */
+}
+div.chat-view-bubble.chat-view-align-right::after {
+    right: calc(-1 * var(--tail-width) + 6px);
 }
 
 /* fraunces
