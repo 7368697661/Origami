@@ -1,6 +1,6 @@
 /*
-:: 📄 Origami
-🎨 a theme by @voidbbg (formerly kneecaps)
+:: 📄 origami
+🎨 a theme by kneecaps
 🏆 winner of best new theme, O_O 2022 💖
 */
 
@@ -834,7 +834,7 @@ body {
 	*/
     --scrollbar-active-thumb-bg: hsla(var(--color-accent-hsl), 0.2);
     --scrollbar-bg: rgba(var(--mono-rgb-100), 0.05);
-    --scrollbar-thumb-bg: rgba(var(--mono-rgb-100), 0);
+    --scrollbar-thumb-bg: rgba(var(--mono-rgb-100), 0.05);
 
     /* Search 
 	*/
@@ -2542,7 +2542,7 @@ body {
 /* master element to make most ui transparent for rebuild
 */
 
-/* Workspace Splits */
+/* workspace splits */
 .workspace-split.mod-root,
 .workspace-split.mod-vertical,
 .mod-right-split.workspace-split,
@@ -2551,14 +2551,14 @@ body {
 .workspace-split.mod-vertical .workspace-tab-header-container,
 body:not(.is-mobile) .workspace-split.mod-left-split .workspace-sidedock-vault-profile,
 
-/* Workspace Tabs */
+/* workspace tabs */
 .workspace-tabs,
 .mod-vertical .workspace-tabs,
 .workspace-tabs .workspace-leaf,
 .mod-left-split .workspace-tabs .workspace-leaf,
 .mod-right-split .workspace-tabs .workspace-leaf,
 
-/* Workspace Leaf and Headers */
+/* workspace leaf and headers */
 .workspace-leaf.mod-active .view-header,
 .workspace-tab-header.is-active,
 .workspace-tab-header-container,
@@ -2567,7 +2567,7 @@ body:not(.is-mobile) .workspace-split.mod-left-split .workspace-sidedock-vault-p
 .mod-right-split .workspace-tab-header-container,
 .is-focused .workspace-leaf.mod-active .view-header,
 
-/* Containers and Layouts */
+/* containers and layouts */
 .workspace,
 .mod-vertical,
 .mod-left-split,
@@ -2576,7 +2576,7 @@ body:not(.is-mobile) .workspace-split.mod-left-split .workspace-sidedock-vault-p
 .horizontal-main-container,
 .mod-vertical .workspace-tab-container,
 
-/* Highlight and Formatting */
+/* highlight and formatting */
 .is-hidden-frameless:not(.is-fullscreen).is-focused .titlebar-button-container.mod-right {
     background: transparent;
 }
@@ -2790,7 +2790,7 @@ body:not(.is-mobile) .workspace-split.mod-left-split .workspace-sidedock-vault-p
     animation: pop 350ms;
   }
   
-  /* Adjust border radius for left/right splits */
+  /* adjust border radius for left/right splits */
   .mod-left-split .workspace-tab-header.is-active,
   .mod-right-split .workspace-tab-header.is-active {
     border-radius: var(--radius-m);
@@ -2882,7 +2882,7 @@ body:not(.is-mobile) .workspace-split.mod-left-split .workspace-sidedock-vault-p
   /* ========================================================================== */
   
   /* content padding in markdown editor */
-  .view-content > .markdown-source-view.mod-cm6 > .cm-editor > .cm-scroller {
+body:not(.is-phone) .view-content > .markdown-source-view.mod-cm6 > .cm-editor > .cm-scroller {
     padding: 4em 2em;
   }
   
@@ -2934,7 +2934,8 @@ ribbon styles
   
 /* collapsed ribbon (left) */
   .workspace-ribbon.mod-left.is-collapsed {
-    background: var(--background-secondary);
+    background: var(--background-primary-alt);
+    border-right: var(--bb-border) !important;
   }
   
   /* ==========================================================================
@@ -2967,7 +2968,7 @@ ribbon styles
     background: transparent;
   }
   
-  /* HOVER & ACTIVE STATES */
+/* hover & active states */
   .workspace-ribbon.mod-left .sidebar-toggle-button:hover {
     background: var(--color-accent);
     border: 0px solid transparent;
@@ -2978,7 +2979,7 @@ ribbon styles
     transform: scale(0.9);
   }
   
-  /* DECORATIVE ::BEFORE ELEMENT (SWOOSH EFFECT) */
+/* decorative ::before element (swoosh effect) */
   .workspace-ribbon.mod-left .sidebar-toggle-button:before {
     content: "";
     position: absolute;
@@ -2990,7 +2991,7 @@ ribbon styles
     transition: all 0.5s;
 }
   
-  /* HOVER TRANSFORM */
+/* hover transform */
   .workspace-ribbon.mod-left .sidebar-toggle-button:hover::before {
     transform: skewX(30deg) translate(150%, -50%);
     transition-delay: 0.1s;
@@ -2998,7 +2999,7 @@ ribbon styles
 
 
 /* ========================================================================== */
-/*  LEFT / RIGHT LEAVES  */
+/*  left / right leaves  */
 /* ========================================================================== */
   
 .workspace-split.mod-right-split .workspace-tabs .workspace-leaf-resize-handle,
@@ -3046,14 +3047,14 @@ body:not(.is-mobile) .workspace-sidedock-vault-profile {
 /*  new button  */
 /* ========================================================================== */
 
-.clickable-icon[aria-label="New note"] {
+.clickable-icon[aria-label="new note"] {
     padding: 0px 8px 0px 4px;
-	border: var(--o-border, var(--bb-border-dashed));
+    border: var(--o-border, var(--bb-border-dashed));
 }
 
-.clickable-icon[aria-label="New note"]::before {
-    content: "New Note";
-	padding: 0px 8px;
+.clickable-icon[aria-label="new note"]::before {
+    content: "new note";
+    padding: 0px 8px;
 }
 
 /* ========================================================================== */
@@ -3166,7 +3167,7 @@ select, .dropdown {
     transition: 700ms;
 }
 
-/* Major Checkbox Styling
+/* major Checkbox Styling
 */
 .checkbox-container {
 	background-color: var(--color-base-25);
@@ -3392,6 +3393,7 @@ body:not(.is-phone) .community-item.is-selected .community-item-author, body:not
     border-bottom: var(--bb-border);
 }
 
+
 .menu {
     padding: var(--size-2-3);
     border: var(--bb-border-alt);
@@ -3417,8 +3419,7 @@ body:not(.is-phone) .community-item.is-selected .community-item-author, body:not
     box-shadow: none !important;
 }
 
-.menu:not(.is-phone),
-.prompt:not(.is-phone) {
+body:not(.is-phone) :is(.menu, .prompt) {
     animation: slide-top 0.35s cubic-bezier(0.175, 0.885, 0.320, 1.275) both;
 }
 
@@ -3504,18 +3505,22 @@ kbd,
 /* add ∘ as note icons
 */
 .nav-file-title::before {
-    content: "○";
+    content: "∘";
     width: 14px;
     height: 14px;
     display: inline-block;
     color: var(--text-normal);
     flex-shrink: 0;
-    margin-right: 4px;
+    margin-right: 0px;
 }
 
 .nav-file-title {
-    --persistent-transform: translateX(-15px);
+    --persistent-transform: translateX(-18px);
     transform: var(--persistent-transform);
+}
+
+.tree-item.nav-folder:not(.is-collapsed) .tree-item-self.nav-file-title {
+    --persistent-transform: translateX(-33px);
 }
 
 .nav-file-title > * {
@@ -3524,7 +3529,7 @@ kbd,
 
 .nav-file-title.is-active {
     transform-origin: left center;
-    animation: pop-trans 350ms;
+    /* animation: pop-trans 350ms; */
 }
 
 /* change > infront of active folder
@@ -3546,13 +3551,17 @@ kbd,
 }
 
 .nav-file-title.is-active::before {
-    content: "●";
+    transform: translate(2px);
+}
+
+.nav-file-title.is-active::before {
+    content: "•";
     width: 14px;
     height: 14px;
     display: inline-block;
     color: var(--text-accent);
     flex-shrink: 0;
-    margin-right: 4px;
+    margin-right: 0px;
 }
 
 /* change color of title for open folders
@@ -4978,8 +4987,119 @@ body {
 	margin-left: 1em;
   }
 
+/* mobile
+*/
+
+.is-mobile .empty-state-action {
+    border: var(--bb-border);
+    background: var(--background-secondary);
+}
+
+.workspace-drawer-active-tab-header {
+    background: var(--background-primary-alt);
+    border: var(--bb-border);
+}
+
+.mobile-navbar-tabs-action {
+    background: var(--background-secondary);
+    border: var(--bb-border);
+    border-radius: var(--radius-s);
+    padding: 16px 16px;
+}
+
+.is-phone .menu {
+    background-color: var(--background-secondary);
+    border-top: var(--bb-border);
+}
+
+.is-mobile .horizontal-main-container {
+    border-bottom: var(--bb-border-dashed) !important;
+}
+
+body.is-phone .nav-file-title.is-active::before {
+    transform: translate(2px);
+}
+
+body.is-phone .nav-file-title.is-active::before {
+    content: "•";
+    width: 14px;
+    height: 14px;
+    display: inline-block;
+    color: var(--text-accent);
+    flex-shrink: 0;
+    margin-right: 0px;
+}
+
+body.is-phone .nav-file-title::before {
+    content: "∘";
+    width: 14px;
+    height: 14px;
+    display: inline-block;
+    color: var(--text-normal);
+    flex-shrink: 0;
+    margin-right: 10px;
+}
+
+body.is-phone .nav-file-title {
+    --persistent-transform1: translateX(-17.5px);
+    transform: var(--persistent-transform1);
+}
+
+body.is-phone .tree-item.nav-folder:not(.is-collapsed) .tree-item-self.nav-file-title {
+    --persistent-transform1: translateX(-34.5px);
+}
+
+body.is-phone .nav-file-title > * {
+    --persistent-transform1: ;
+}
+
+body.is-phone .nav-file-title.is-active {
+    transform-origin: left center;
+    animation: none;
+}
+
+/* new tab page
+*/
+
+body:not(.is-mobile) .empty-state-container {
+    background: var(--background-secondary);
+    border: var(--bb-border);
+    padding: 1em;
+    border-radius: var(--radius-l);
+}
+
+body:not(.is-mobile) .empty-state-title {
+    background: var(--background-primary);
+    border: var(--bb-border);
+    padding: 8px 16px;
+    border-radius: var(--radius-m);
+    font-family: var(--font-title);
+}
+
+.empty-state-title {
+    background: var(--background-secondary);
+    border: var(--bb-border);
+    padding: 8px 16px;
+    border-radius: var(--radius-m);
+    font-family: var(--font-title);
+}
+
 /* plugin support
 */
+
+/* iconic
+*/
+.tree-item-self > .iconic-sidekick svg.svg-icon {
+    color: var(--color-accent);
+}
+
+.tree-item-self:has(.tree-item-icon .svg-icon:not(.right-triangle)).nav-file-title::before {
+    display: none;
+}
+
+.tree-item-self:has(.tree-item-icon .svg-icon:not(.right-triangle)).nav-file-title {
+    transform: translate(-17.5px);
+}
 
 /* loomsidian
 */
