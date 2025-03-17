@@ -3363,6 +3363,12 @@ hr {
 	color: var(--text-muted);
 }
 
+.is-focused .mod-stacked.mod-active .workspace-tab-header.is-active .workspace-tab-header-inner-title,
+.is-focused .mod-stacked .workspace-tab-header.is-active,
+.mod-stacked .workspace-tab-header.is-active {
+	color: var(--text-accent);
+}
+
 .is-focused .mod-active .workspace-tab-header.is-active .workspace-tab-header-inner-title,
 .is-focused .workspace-tab-header.is-active,
 .workspace-tab-header.is-active {
