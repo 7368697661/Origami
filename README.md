@@ -9,6 +9,8 @@ i knew i wanted something subtle, something that didnt deviate too far from vani
 
 inspiration was taken from printed works and the creases of folded paper, mimicked using dashed borders. i spent hours (hundreds at this point) prototyping fonts and color schemes to figure out what worked aesthetically. the end result is that origami is _writing refined_a faithful attempt to bring the tactility of real physical media to a modern electronic writing app ⸜(｡˃ ᵕ ˂ )⸝♡
 
+if you like what im doing and wanna help out, check out my kofi! [![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/N4N71EEJAC)
+
 ### table of contents
 1. 🤔 what is origami?
 	1. 📝 typography
