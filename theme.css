@@ -3560,6 +3560,7 @@ select, .dropdown {
     box-shadow: var(--bb-shadow);
     border: var(--bb-border);
     background: var(--background-primary);
+    z-index: 99;
 }
 
 .suggestion-item {
@@ -5502,6 +5503,11 @@ body:not(.is-mobile) .empty-state-title {
     border-radius: var(--radius-m);
     font-family: var(--font-title);
 }
+
+/* bases
+*/
+
+
 
 /* plugin support
 */
