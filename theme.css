@@ -2650,10 +2650,10 @@ body {
     --radius-s: 0px !important;
 }
 
-.o-hack-d.workspace-tab-header-container,
-.o-hack-d.workspace-split.mod-vertical .workspace-tab-header-container,
-.o-hack-d.workspace-tabs.mod-top-right-space .workspace-tab-header-container,
-.o-hack-d.workspace-tabs.mod-top-left-space .workspace-tab-header-container {
+.o-hack-d .workspace-tab-header-container,
+.o-hack-d .workspace-split.mod-vertical .workspace-tab-header-container,
+.o-hack-d .workspace-tabs.mod-top-right-space .workspace-tab-header-container,
+.o-hack-d .workspace-tabs.mod-top-left-space .workspace-tab-header-container {
     background: #ffffff !important;
     height: 41px
 }
