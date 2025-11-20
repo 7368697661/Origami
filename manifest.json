@@ -1,6 +1,6 @@
-{
-	"name": "ori-dev",
-	"version": "1.0.0.2",
-	"minAppVersion": "1.0.0",
-	"author": "void bb"
+{  
+   "name": "Origami",  
+   "version": "2.0.0.5",  
+   "minAppVersion": "1.0.0",  
+   "author": "kneecaps"
 }
